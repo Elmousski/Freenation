@@ -2,6 +2,10 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.1'
+gem 'bootstrap'
+#gem 'bootstrap-sass', '3.2.0.2'
+gem 'jquery-rails'
+
 
 gem 'devise'
 gem 'rails', '~> 5.2.1', '>= 5.2.1.1'
@@ -38,3 +42,5 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem 'rails_12factor'
