@@ -324,3 +324,167 @@ Processing by UsersController#index as HTML
 Completed 200 OK in 1007ms (Views: 969.0ms | ActiveRecord: 0.0ms)
 
 
+  [1m[35m (22.0ms)[0m  [1m[35mCREATE DATABASE "free_app_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (6.4ms)[0m  [1m[35mCREATE DATABASE "free_app_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1262038994841662520)[0m
+  ↳ bin/rails:9
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to DeviseCreateUsers (20181203110912)
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (43.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181203110912_devise_create_users.rb:5
+  [1m[35m (5.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/migrate/20181203110912_devise_create_users.rb:39
+  [1m[35m (4.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  ↳ db/migrate/20181203110912_devise_create_users.rb:40
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181203110912"]]
+  ↳ bin/rails:9
+  [1m[35m (3.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(1262038994841662520)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE DATABASE "free_app_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE DATABASE "free_app_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1262038994841662520)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(1262038994841662520)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1262038994841662520)[0m
+  ↳ bin/rails:9
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddDetailsToUsers (20181204111031)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "users" ADD "last_name" character varying[0m
+  ↳ db/migrate/20181204111031_add_details_to_users.rb:3
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "users" ADD "first_name" character varying[0m
+  ↳ db/migrate/20181204111031_add_details_to_users.rb:4
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "users" ADD "pseudo" character varying[0m
+  ↳ db/migrate/20181204111031_add_details_to_users.rb:5
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "users" ADD "age" character varying[0m
+  ↳ db/migrate/20181204111031_add_details_to_users.rb:6
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "users" ADD "title_job" character varying[0m
+  ↳ db/migrate/20181204111031_add_details_to_users.rb:7
+  [1m[35m (1.8ms)[0m  [1m[35mALTER TABLE "users" ADD "life_description" content[0m
+  ↳ db/migrate/20181204111031_add_details_to_users.rb:8
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(1262038994841662520)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1262038994841662520)[0m
+  ↳ bin/rails:9
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddDetailsToUsers (20181204111031)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (1.5ms)[0m  [1m[35mALTER TABLE "users" ADD "last_name" character varying[0m
+  ↳ db/migrate/20181204111031_add_details_to_users.rb:3
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "users" ADD "first_name" character varying[0m
+  ↳ db/migrate/20181204111031_add_details_to_users.rb:4
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "users" ADD "pseudo" character varying[0m
+  ↳ db/migrate/20181204111031_add_details_to_users.rb:5
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "users" ADD "age" character varying[0m
+  ↳ db/migrate/20181204111031_add_details_to_users.rb:6
+  [1m[35m (2.1ms)[0m  [1m[35mALTER TABLE "users" ADD "title_job" character varying[0m
+  ↳ db/migrate/20181204111031_add_details_to_users.rb:7
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "users" ADD "life_description" text[0m
+  ↳ db/migrate/20181204111031_add_details_to_users.rb:8
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "users" ADD "city" character varying[0m
+  ↳ db/migrate/20181204111031_add_details_to_users.rb:9
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "users" ADD "language1" character varying[0m
+  ↳ db/migrate/20181204111031_add_details_to_users.rb:10
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "users" ADD "language2" character varying[0m
+  ↳ db/migrate/20181204111031_add_details_to_users.rb:11
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "users" ADD "language3" character varying[0m
+  ↳ db/migrate/20181204111031_add_details_to_users.rb:12
+  [1m[36mActiveRecord::SchemaMigration Create (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181204111031"]]
+  ↳ bin/rails:9
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(1262038994841662520)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1262038994841662520)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateEvents (20181204112528)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (36.5ms)[0m  [1m[35mCREATE TABLE "events" ("id" bigserial primary key, "title_event" character varying, "city" character varying, "country" character varying, "description_event" text, "meeting_point" character varying, "starting_time" timestamp, "starting_date" timestamp, "ending_date" timestamp, "number_of_places" integer, "gps_coordinates" character varying, "price" integer, "users" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181204112528_create_events.rb:3
+  [1m[35m (7.9ms)[0m  [1m[35mCREATE  INDEX  "index_events_on_users" ON "events"  ("users")[0m
+  ↳ db/migrate/20181204112528_create_events.rb:19
+  [1m[36mActiveRecord::SchemaMigration Create (3.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181204112528"]]
+  ↳ bin/rails:9
+  [1m[35m (3.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateFollows (20181204112721)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (52.1ms)[0m  [1m[35mCREATE TABLE "follows" ("id" bigserial primary key, "event" character varying, "user" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181204112721_create_follows.rb:3
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE  INDEX  "index_follows_on_event" ON "follows"  ("event")[0m
+  ↳ db/migrate/20181204112721_create_follows.rb:9
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE  INDEX  "index_follows_on_user" ON "follows"  ("user")[0m
+  ↳ db/migrate/20181204112721_create_follows.rb:10
+  [1m[36mActiveRecord::SchemaMigration Create (3.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181204112721"]]
+  ↳ bin/rails:9
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateComments (20181204112859)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (11.8ms)[0m  [1m[35mCREATE TABLE "comments" ("id" bigserial primary key, "date_comment" timestamp, "text_comments" text, "users" character varying, "event" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181204112859_create_comments.rb:3
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE  INDEX  "index_comments_on_users" ON "comments"  ("users")[0m
+  ↳ db/migrate/20181204112859_create_comments.rb:11
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE  INDEX  "index_comments_on_event" ON "comments"  ("event")[0m
+  ↳ db/migrate/20181204112859_create_comments.rb:12
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181204112859"]]
+  ↳ bin/rails:9
+  [1m[35m (4.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(1262038994841662520)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9

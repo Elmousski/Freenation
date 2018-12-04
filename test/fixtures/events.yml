@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title_event: MyString
+  city: MyString
+  country: MyString
+  description_event: MyText
+  meeting_point: MyString
+  starting_time: 2018-12-04 12:25:28
+  starting_date: 2018-12-04 12:25:28
+  ending_date: 2018-12-04 12:25:28
+  number_of_places: 1
+  gps_coordinates: MyString
+  price: 1
+  users: MyString
+
+two:
+  title_event: MyString
+  city: MyString
+  country: MyString
+  description_event: MyText
+  meeting_point: MyString
+  starting_time: 2018-12-04 12:25:28
+  starting_date: 2018-12-04 12:25:28
+  ending_date: 2018-12-04 12:25:28
+  number_of_places: 1
+  gps_coordinates: MyString
+  price: 1
+  users: MyString

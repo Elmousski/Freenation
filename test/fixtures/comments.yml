@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date_comment: 2018-12-04 12:28:59
+  text_comments: MyText
+  users: MyString
+  event: MyString
+
+two:
+  date_comment: 2018-12-04 12:28:59
+  text_comments: MyText
+  users: MyString
+  event: MyString
