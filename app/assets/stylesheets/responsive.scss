@@ -1,0 +1,258 @@
+/*      Tablet Layout: 768px.    */
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .single-item{margin-bottom: 30px;}
+    .single-item:last-child{margin-bottom: 0px;}
+
+
+.header-top-area .header-top-left .header-top-contact li {
+    display: inline-flex;
+    padding: 68px 10px 0 0;
+    color: #fff;
+}
+.header-top-right{
+    text-align: right;
+    width: 20%;
+    float: left;
+    padding-top: 52px;
+}
+/*---- tab form ----*/
+    .tabbased-search-area {
+        background: #2c3035;
+        position: relative;
+        margin-top:-200px;
+        padding: 100px 0;
+    }
+    .tab-menu li {padding: 14px !important}
+    .custom-select a {width: 100%;}
+    .tabbased-search-area .tab-content .hotels-form .hotel-input-4-23 .custom-select a, .tabbased-search-area .tab-content .flights-form .hotel-input-4-23 .custom-select a { width: 100%;}
+    .input-b{width: 50% !important; margin: 10px 0;}
+    .input-s{width: 50% !important;   margin: 10px 0;} 
+    .searc-btn-7, .searc-btn-7 {
+        width: 100px !important;;
+        float: none  !important;
+        margin: 0px auto  !important;
+    }
+    .searc-btn-7 button,  .searc-btn-7 button { border-radius: 0 !important;}
+    .count-down-bg .count-timer .time-wrapper .timer li { margin: 10px;}
+    .phone-layout-s { padding-bottom: 30px;}
+    .phone-layout-s:last-child { padding-bottom: 0;}
+
+/*========= index 02 ==========*/
+    .popular-country .destination-countrys .tab-content figure figcaption {padding: 15px; text-align: center;}
+.popular-country .destination-countrys .tab-content figure figcaption .city-name .tower-bridge li:last-child {
+    margin-left: 0px;
+}
+
+    .tabbased-search-area-2 .bg-shadoow-image { padding: 100px 15px 50px; margin-top: -30px;}
+    .tabbased-search-area .tab-content .hotels-form .hotel-input-2, .tabbased-search-area .tab-content .flights-form .hotel-input-2 {width: 50% !important;}
+    .tabbased-search-area .tab-content .hotels-form .hotel-input-4, .tabbased-search-area .tab-content .flights-form .hotel-input-4 {width: 50%;}
+    .tabbased-search-area .tab-content .hotels-form .hotel-input-1, .tabbased-search-area .tab-content .flights-form .hotel-input-1 { width: 25% !important;margin-top: 10px;}
+    .img-rounded {width: 100%;}
+    .padding-bottom { margin-bottom: 30px;}
+    .padding-bottom:last-child { margin-bottom: 0px;}
+    .subscribe-area-2 .subscribe-title-box { width: 100%;text-align: center;}
+    .subscribe-area-2 .subscribe-form {width: 400px;}
+    .subscribe-area-2 .subscribe-form-box { margin-left: 21%;}
+
+/*========= index 03 ==========*/
+
+.header-area-style-3 .book-online { width: 120px; margin-left: 386px;}
+.header-area-style-3 .header-bottom-area .logo-area { padding: 27px 0; width: 200px; float: left;}
+.herounit-bg .tabbased-search-3 .tab-menu-item-3 .tab-menu-3 li { padding: 30px 54px;}
+.popular-packages .single-package .package-calto-action { padding: 0 15px 25px;}
+.col-md-6.col-sm-6.fhdsfhgd { width: 100%;}
+.ImageBlock--switch-tab {width: 100%;}
+.choose-travelstar-version-2 .ImageBlock--switch .ImageBlock--switch-img {  display: none;}
+.top-testimonial-image .slider-nav-two .slick-slide::before { height: 69%;width: 71%;}
+.block-text .single-box::before {left: 0;}
+.block-text .single-box::after {right: 0; top: 85px;}
+.subscribe-area .subscribe-form .serach-form input {  width: 95%;}
+.single-travel-blog .blog-content .blog-meta .post-social li {    margin: 0;}
+
+
+/*========= index 04 ==========*/
+.header-bottom-area-4 .logo-area {padding: 65px 0 15px;}
+.tabbased-search-area-4 { background: #ffffff;}
+
+/*========= index 05 ==========*/
+.single-package-carasoul .package-location img{ height: 240px;}
+.blog-2 .single-travel-blog .blog-content .blog-post-content .post-social-2 li { padding: 0 15px 0 0;}
+
+/*========= package Styel ==========*/
+.single-bredcurms { overflow: visible;}
+.header-top-contact { width: 540px;}
+.header-top-right .book-btn { float: none; width: 115px;}
+.package-tab-menu .package-tab-menu li a { padding: 15px 33px;}
+.single .blog-comments .single-comments .head { width: 20%;}
+.single .blog-comments .single-comments .body {width: 80%;}
+.single .blog-comments .single-comments h4 {text-align: center;}
+}
+
+/*======================  Mobile Layout: 320px. =======================  */
+
+@media only screen and (max-width: 767px) {
+    .single-item{margin-bottom: 30px;}
+    .single-item:last-child{margin-bottom: 0px;}
+
+/*========= index ==========*/
+    .bredcrums-content {text-align: center;}
+    .slider-area {min-height: 0;}
+    .mean-bar { position: fixed !important;}
+    .tap-v-responsive{ width:100%;}
+    .logo-area {  width: 25%; margin: 0px auto;} 
+    .header-top-left { display: none;}  
+    .logo-area { position: absolute;top: -70px;}
+    .book-btn { margin-top: 52px;}
+    .slider-area .tparrows {display: none;}
+    /*---- tab form ----*/
+    .tabbased-search-area {
+        background: #2c3035;
+        position: relative;
+        margin-top: 0;
+        padding: 100px 0;
+    }
+    .tab-menu li {padding: 14px !important}
+    .custom-select a {width: 100%;}
+    .tabbased-search-area .tab-content .hotels-form .hotel-input-4-23 .custom-select a, .tabbased-search-area .tab-content .flights-form .hotel-input-4-23 .custom-select a { width: 100%;}
+    .input-b{width: 100% !important; margin: 10px 0;}
+    .input-s{width: 50% !important;   margin: 10px 0;} 
+    .searc-btn-7, .searc-btn-7 {
+        width: 100px !important;;
+        float: none  !important;
+        margin: 0px auto  !important;
+    }
+    .searc-btn-7 button,  .searc-btn-7 button { border-radius: 0 !important;}
+    .count-down-bg .count-timer .time-wrapper .timer li { margin: 10px;}
+    .phone-layout-s { padding-bottom: 30px;}
+    .phone-layout-s:last-child { padding-bottom: 0;}
+    .footer-area { padding-top: 100px;}
+    .footer-area .single-footer .footer-title { padding: 0px 0 20px;}
+    .footer-area .single-footer { padding:0 !important;}
+    .footer-area .single-footer .single-recent-post .recent-post li { display: inline-flex;}
+    .footer-social-media { text-align: center;}
+    .footer-area .footer-bottom .payicon{width:100%; text-align: center;}
+    .copyright { text-align: center;}
+    .footer-area .footer-bottom .payicon li {
+        margin-right: 5px;
+        margin-top: -5px;
+        display: contents;
+        text-align: center;
+    }
+    .footer-area .single-footer .footer-gallery li { width: 45%; margin: 5px;}
+    .footer-area .image-overlay > img { width: 100% !important;}
+    .slider-area-2 .tparrows {display: none;}
+    .tabbased-search-area-2 .bg-shadoow-image {
+        padding: 100px 15px 0; 
+        margin-top: 0px;
+        background: #2c3035 ;
+        box-shadow: none;
+    }
+
+
+    .popular-country .destination-countrys .tab-content figure figcaption {
+    padding: 15px;
+}
+    .tabbased-search-area-2 .tab-content-2 .hotels-form input, .tabbased-search-area-2 .tab-content-2 .flights-form input {background: #ffffff;}
+    .tabbased-search-area-2 .tab-content-2 .hotels-form .hotel-input-4 .custom-select, .tabbased-search-area-2 .tab-content-2 .hotels-form .hotel-input-4-23 .custom-select, .tabbased-search-area-2 .tab-content-2 .flights-form .hotel-input-4 .custom-select, .tabbased-search-area-2 .tab-content-2 .flights-form .hotel-input-4-23 .custom-select {background: #ffffff}
+    .tabbased-search-area-2 .background-opacity {background:none;}
+    .tabbased-search-area .tabbable-menu .tab-menu {margin-bottom: 0px;}
+    .tabbased-search-area-2 .tab-content-2 .hotel-input-2, .tabbased-search-area-2 .tab-content-2 .hotel-input-4, .tabbased-search-area-2 .tab-content-2 .hotel-input-1, .tabbased-search-area-2 .tab-content-2 .custom-select, .tabbased-search-area-2 .tab-content-2 .hotel-input-4-23, .tabbased-search-area-2 .tab-content-2 .tour-input-20, .tabbased-search-area-2 .tab-content-2 .tour-input-15 {margin-right: 0;}
+    .tabbased-search-area-2 .tab-content-2 .hotel-input-2 { width: 100% !important;}
+    .tabbased-search-area .tab-content .hotels-form .hotel-input-1, .tabbased-search-area .tab-content .flights-form .hotel-input-1 {
+        width: 50% !important;
+        float: left;
+        border-right: 1px solid #ccc;
+    }
+    .input-b-2{width: 100% !important; margin: 10px 0;}
+    .input-s-2{width: 50% !important;   margin: 10px 0;} 
+    .tabbased-search-area-2 .tab-content-2 .hotel-input-4-23 { width: 100% !important; margin: 10px 0;}
+    .section-paddings {text-align: center;}
+    .welcome-area .single-welcome-area .overlay-image {display: none;}
+    .single-welcome-text { padding-top: 30px;}
+    .section-title-version-2 h2, .section-title-version-2-white h2, .section-title-version-2-black h2 {background-position: bottom center;}
+    .tour-package-bg { padding: 100px 15px;}
+    .img-responsive.img-rounded {width: 100%;}
+    .popular-country .padding-bottom {margin-bottom: 30px;}
+    .popular-country .padding-bottom:last-child { margin-bottom: 0;}
+    .popular-country .destination-tab-menu .destination-menu li { margin-bottom: 10px;}
+    .offer-package .single-offer .single-offer-details { margin-left: 0px; padding: 16px 30px;}
+    .subscribe-area-2 { text-align: center;}
+
+/*========= index 03 ==========*/
+
+.header-area-style-3 .book-online a {
+    width: 140px;
+    margin: 57px auto 7px;
+}
+
+    .herounit-bg .tabbased-search-3 .tab-content-3 .hotels-form-3 div { padding: 0px;}
+    .thailand-trip .col-md-6, .thailand-trip .col-sm-6 { left: 0px;}
+    .section-title-3 {padding-left: 0;}
+    .thailand-trip .thailand-description { padding-left: 0;}
+    .subscribe-area .subscribe-form .serach-form input {background-image:  none; padding-right: 80px;}
+
+
+/*========= index 04 ==========*/
+    .tabbased-search-area-4 { background: #ffffff;}
+    .discount-package-4 {text-align: center;}
+    .single-counter-box{width: 50%; margin-bottom: 30px;}
+    .single-counter-box:last-child{ margin-bottom: 0px;}
+    .top-destination-area figure img { width: 100%;}
+
+/*========= index 05 ==========*/
+    .discount-package-5 .discount-package-4-title .sticker { right: 15px;}
+    .discount-package-5 .discount-package-4-title h2 { font-size: 35px;}
+    .discount-package-5 .discount-package-4-title h3 { font-size: 30px;}
+
+/*========= package Styel ==========*/
+    .single-package-details .package-content li:not(:last-child) { margin: 5px 0;}
+    .single-package-details .package-content li:last-child { padding:0;}
+    .single-package-details .package-content li:not(:last-child)::before {display: none;}
+    .package-tab-menu .package-tab-menu li a { padding: 8px 15px;margin: 2px 0;}
+    .tab-content .tour-description {padding: 15px;}
+    .tab-content .chosse-packge {padding: 15px;}
+    .packaging-contents {text-align: left;float: left !important}
+    .info-list {
+        width: 50%;
+        float: left;
+        padding: 0 15px;
+        text-align: left;
+    }
+    .adding-form .addfor-bg .add-content {left: 0;padding: 0 15px;}
+
+/*========= Blog Styel ==========*/
+    .single .blog-comments .single-comments .head {width: 100%;}
+    .single .blog-comments .single-comments h4 { text-align: center;}
+    .single .blog-comments .single-comments .body {width: 100%;margin-top: 20px;}
+    .single .comment-respond label {float: left;}
+    .single .blog-sidebar .single-sidebar { margin-top: 100px;}
+    .single .blog-sidebar .single-sidebar ul{text-align: left;}
+    .post-info {text-align: left;}
+}
+
+
+/*  Wide Mobile Layout: 480px    */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+/*========= index ==========*/
+
+    .input-b{width: 50% !important; margin: 10px 0;}
+    .input-s{width: 50% !important;   margin: 10px 0;} 
+    .footer-area .single-footer .footer-gallery li {width: 20%;}
+
+/*========= index 02 ==========*/
+    .slider-area-2 .tparrows {display: block;}
+    .tabbased-search-area-2 .tab-content-2 .hotel-input-2 { width: 50% !important;}
+    .input-b-2{width: 50% !important; margin: 10px 0;}
+    .tabbased-search-area-2 .tab-content-2 .search-btn-2 { width: 50%;}
+    .tabbased-search-area-2 .tab-content-2 .search-btn-2 button { margin: 25px auto 0;}
+    .tabbased-search-area .tab-content .hotels-form .hotel-input-4-23, .tabbased-search-area .tab-content .flights-form .hotel-input-4-23 {width: 50% !important;}
+
+/*========= index 04 ==========*/
+    .single-counter-box { width: 33.33%;}
+
+/*========= index 05 ==========*/
+    .top-destination-area-5 .single-destionation-5 .destination-5-description .rating-review-5 li:last-child { float: none; }
+    .hotels-area-2 .single-hotels-2 .hotel-image img{width: 100%;}
+
+}
