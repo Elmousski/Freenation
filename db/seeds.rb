@@ -91,8 +91,7 @@ User.create!(last_name: 'Pasqua',
 #===== EVENTS =======
 
 
-Event.create!(id_event:'1', 
-	title_event:'Convoyage de marchandise à peine suspecte', #(string)
+Event.create!(title_event:'Convoyage de marchandise à peine suspecte', #(string)
 	city:'Marseille', #(string)
 	country:'France', #(string)
 	description_event:'Salut les freelenceurs! Je cherche des types sympas pour un petit roadtrip de Marseille à Paris. On transportera des boîtes de conserve de ma sauce tomate perso faite maison par ma maman', #(content)
@@ -108,8 +107,7 @@ Event.create!(id_event:'1',
 	background_image_event:'https://camdenhawthorn.com/wp-content/uploads/2018/03/DSC_0657-1580x550.jpg', #(1680 x 550) 
 	user:'1') #(de l’orga uniquement)
 
-Event.create!(id_event:'2',
-	title_event:"Organisation de la soirée d'ouverture du Krypton", #(string)
+Event.create!(title_event:"Organisation de la soirée d'ouverture du Krypton", #(string)
 	city:'Aix-en-Provence', #(string)
 	country:'France', #(string)
 	description_event:"Vous l'avez peut-être lu dans La Provence: j'ouvre mon nightclub! J'ai besoin de personnes motivées et qui ne comptent pas leurs heures pour assurer à la soirée d'ouverture. En guest : James Brown et Patrick Sebastien!!!", #(content)
@@ -125,8 +123,7 @@ Event.create!(id_event:'2',
 	background_image_event:'https://camdenhawthorn.com/wp-content/uploads/2018/03/DSC_0657-1580x550.jpg', #(1680 x 550)
 	user:'2') #(de l’orga uniquement)
 
-Event.create!(id_event:'3',
-	title_event:"Vol d'un cajot de cerises", #(string)
+Event.create!(title_event:"Vol d'un cajot de cerises", #(string)
 	city:'Lyon', #(string)
 	country:'France', #(string)
 	description_event:"Je voudrais lancer ma carrière dans le grand banditisme pour me faire un peu d'expérience afin d'écrire un livre et pourquoi pas faire un petit film", #(content)
@@ -142,8 +139,7 @@ Event.create!(id_event:'3',
 	background_image_event:'https://camdenhawthorn.com/wp-content/uploads/2018/03/DSC_0657-1580x550.jpg', #(1680 x 550)
 	user:'3') #(de l’orga uniquement)
 
-Event.create!(id_event:'4',
-	title_event:"Évasion de la Prison de la Santé", #(string)
+Event.create!(title_event:"Évasion de la Prison de la Santé", #(string)
 	city:'Paris', #(string)
 	country:'France', #(string)
 	description_event:"Actuellement détenu à la prison de la Santé (seulement 1 étoile sur Tripadvisor...), je cherche une équipe motivée pour m'aider à partir en voyage. Je dispose déjà de quelques complices (avocat, gardiens...) mais toute aide sera la bienvenue ", #(content)
@@ -159,8 +155,7 @@ Event.create!(id_event:'4',
 	background_image_event:'https://camdenhawthorn.com/wp-content/uploads/2018/03/DSC_0657-1580x550.jpg', #(1680 x 550)
 	user:'4') #(de l’orga uniquement))
 
-Event.create!(id_event:'5', 
-	title_event:"Prise d'otage des représentants des membres de l'OPEP", #(string) 
+Event.create!(title_event:"Prise d'otage des représentants des membres de l'OPEP", #(string) 
 	city:'Vienne', #(string) 
 	country:'Autriche', #(string)
 	description_event:"Le prix du baril de pétrol ne cesse d'augmenter. Les gilets jaunes sont bien sympas mais bon, je crois qu'il est temps que nous prenions les choses en main.", #(content)
@@ -176,8 +171,7 @@ Event.create!(id_event:'5',
 	background_image_event:'https://camdenhawthorn.com/wp-content/uploads/2018/03/DSC_0657-1580x550.jpg', #(1680 x 550)
 	user:'5') #(de l’orga uniquement))
 
-Event.create!(id_event:'6',
-	title_event:"Création d'un réseau Corse-Afrique", #(string)
+Event.create!(title_event:"Création d'un réseau Corse-Afrique", #(string)
 	city:'Libreville', #(string)
 	country:'Gabon', #(string)
 	description_event:"Je cherche des individus louches pour organiser mon réseau entre l'Afrique et la France. Si vous êtes corse, ça m'interesse ", #(content)
