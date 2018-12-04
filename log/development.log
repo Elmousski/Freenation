@@ -311,3 +311,23 @@ Processing by Devise::SessionsController#new as HTML
 Completed 200 OK in 463ms (Views: 269.9ms | ActiveRecord: 135.4ms)
 
 
+  [1m[35m (11.8ms)[0m  [1m[35mCREATE DATABASE "free_app_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE DATABASE "free_app_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+Started GET "/" for 127.0.0.1 at 2018-12-04 02:16:25 +0100
+  [1m[35m (20.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jojo/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1.1/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 1120ms (Views: 1059.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-04 02:16:35 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 148ms (Views: 115.8ms | ActiveRecord: 0.0ms)
+
+
