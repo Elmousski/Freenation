@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_04_112859) do
+ActiveRecord::Schema.define(version: 2018_12_04_154351) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,12 +18,12 @@ ActiveRecord::Schema.define(version: 2018_12_04_112859) do
   create_table "comments", force: :cascade do |t|
     t.datetime "date_comment"
     t.text "text_comments"
-    t.string "users"
     t.string "event"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "user"
     t.index ["event"], name: "index_comments_on_event"
-    t.index ["users"], name: "index_comments_on_users"
+    t.index ["user"], name: "index_comments_on_user"
   end
 
   create_table "events", force: :cascade do |t|
@@ -36,12 +36,13 @@ ActiveRecord::Schema.define(version: 2018_12_04_112859) do
     t.datetime "starting_date"
     t.datetime "ending_date"
     t.integer "number_of_places"
-    t.string "gps_coordinates"
     t.integer "price"
-    t.string "users"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["users"], name: "index_events_on_users"
+    t.string "user"
+    t.float "latitude"
+    t.float "longitude"
+    t.index ["user"], name: "index_events_on_user"
   end
 
   create_table "follows", force: :cascade do |t|
@@ -51,6 +52,12 @@ ActiveRecord::Schema.define(version: 2018_12_04_112859) do
     t.datetime "updated_at", null: false
     t.index ["event"], name: "index_follows_on_event"
     t.index ["user"], name: "index_follows_on_user"
+  end
+
+  create_table "languages", force: :cascade do |t|
+    t.string "name_language"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
