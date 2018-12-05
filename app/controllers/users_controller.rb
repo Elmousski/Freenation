@@ -14,6 +14,10 @@ class UsersController < ApplicationController
 		redirect_id
 	end
 
+	def edit
+		@user = User.find(params[:id])
+	end
+
 
 	private
 	def set_user

@@ -168,11 +168,11 @@
 			<div class="row">
 				<div class="col-sm-12">
 					<div class="bredcrums-content">
-						<h2>Package</h2>
+						<h2>Profil</h2>
 						<ul>
 							<li><a href="index.html">Home</a>
 							</li>
-							<li class="active"><a href="single-package.html">Package Details</a>
+							<li class="active"><a href="single-package.html">Profil / <%= @user.pseudo %> </a>
 							</li>
 						</ul>
 					</div>
@@ -190,14 +190,13 @@
  				<p class="title"> <br>
  				<%= @user.last_name %> <br><br>
 				<%= @user.first_name %><br><br>
-				<%= @user.pseudo %><br><br>
 				<%= @user.age %> ans <br><br>
 				<%= @user.title_job %> <br><br>
 				<%= @user.city %> <br><br>
 				<%= @user.language1 %><br><br>
 				<%= @user.language2 %><br><br>
 				<%= @user.language3 %></p><br><br>
- 				 <p><button>Contact</button></p>
+ 				 <p><button>Editer</button></p>
 		</div>
 </section>
 
@@ -206,6 +205,16 @@
 
 		<div class="excursion">
  				 <p><button>Proposer une excursion</button></p>
+		</div>
+</section>
+
+
+<section class="right">
+	<link rel="stylesheet" href="/assets/font-awesome.min.scss">
+
+		<div class="excursion">
+ 				 <p><button>Proposer une excursion</button></p>
+ 				 <p><button>Editer profil</button></p>
 		</div>
 </section>
 
