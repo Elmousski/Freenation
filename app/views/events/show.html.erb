@@ -10,3 +10,22 @@
   
 
 <%= link_to "Rejoindre l'événement", { :controller => "events", :action => "subscribe"}, class: "btn btn-success" %> 
+
+<h2> Liste des participants </h2>
+
+<table class="table table-striped">
+      <tr>
+      <th>Nom</th>
+      <th>Adresse mail</th>
+      <th></th>
+
+    </tr>
+
+  <% @event.attendees.each do |attendee| %> 
+    <tr>
+    <td> <%= attendee.email %> </td>
+    <td> <%= link_to('Voir le profil du participant', user_path(attendee)) %> </td>
+
+    </tr>
+    <% end %>
+  </table>

@@ -20,7 +20,7 @@
       <td><%= event.city %> ,<%= event.country %></td>
       <td><%= event.starting_date.strftime("%d-%m-%Y")%></td>
       <td><%= event.creator.email %></td>
-      <td><%= event.number_of_places %></td>
+      <td><%= event.attendees.count %>/<%= event.number_of_places %></td>
       <td><%= link_to "Voir l'événement", event_path(event) %></td>
 
     </tr>
