@@ -1,5 +1,5 @@
 <% if user_signed_in? %>
-<h1> Créer un nouvel event !</h1>
+<h1 class="text-center"> Créer un nouvel event !</h1>
 <p class="text-center"> <%= current_user.email %>, merci de renseigner ces informations afin de créer votre événement ! </p>
 
 <%= form_tag (events_path) do %>
@@ -55,5 +55,6 @@
 
 <% else %>
 
+Veuillez vous connecter pour creer un voyage LIEN
 
 <% end %>

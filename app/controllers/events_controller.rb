@@ -21,6 +21,7 @@ class EventsController < ApplicationController
   @event = Event.create(event_params)
   @event.creator = current_user
   if @event.save
+  	  @event.attendees << current_user
       flash[:success] = "Votre événement a bien été créé !"    
   		redirect_to @event
   	else render 'new'
@@ -51,14 +52,6 @@ class EventsController < ApplicationController
     flash[:success] = "Vous participez à l'événement !" 
     redirect_to @event
     end
-  end
-
-  def adduser  
-    @user = User.find(params[:id])
-    @event = Event.find(params[:id])
-    @event.attendees << @user
-    flash[:success] = "#{@user.name} est ajouté à l'événement ! !" 
-    redirect_to @event
   end
 
 

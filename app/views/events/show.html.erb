@@ -1,5 +1,7 @@
+<% if user_signed_in? %>
+
 <div class="rounded-top">
-<h1>
+<h1 class="text-center">
   <%= @event.title_event %>
 </h1>
 <p class="text-center"> Description : <%= @event.description_event %> </p>
@@ -8,8 +10,14 @@
 <p class="text-center"> Créateur : <%= @event.creator.email %> </p>
 </div>
   
+ 
+<% if @event.attendees.count <= @event.number_of_places && unless @event.attendees.include? current_user %>
+<p class="text-center"> <%= link_to "Rejoindre l'événement", { :controller => "events", :action => "subscribe"}, class: "btn btn-success" %> </p>
+<% else  @event.attendees.include? current_user %>
+<p class="text-center"> Deja inscrit ! :) </p>
+<% end %>
+<% end %>
 
-<%= link_to "Rejoindre l'événement", { :controller => "events", :action => "subscribe"}, class: "btn btn-success" %> 
 
 <h2> Liste des participants </h2>
 
@@ -25,7 +33,12 @@
     <tr>
     <td> <%= attendee.email %> </td>
     <td> <%= link_to('Voir le profil du participant', user_path(attendee)) %> </td>
-
     </tr>
     <% end %>
   </table>
+
+  <% else %>
+
+Veuillez vous connecter pour voir la page du voyages LIEN
+
+<% end %>

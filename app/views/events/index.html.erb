@@ -1,3 +1,4 @@
+<% if user_signed_in? %>
 <h1>Tous nos super events</h1>
  
 <h2> Evénements à venir </h2>
@@ -31,7 +32,8 @@
 
 <%= link_to "Créer mon événement", new_event_path %>
 
-<% unless user_signed_in? %>
+  <% else %>
 
-<% end%>
+Veuillez vous connecter pour voir la page du voyages LIEN
 
+<% end %>
