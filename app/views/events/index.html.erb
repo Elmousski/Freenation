@@ -1,2 +1,37 @@
-<h1>Events#index</h1>
-<p>Find me in app/views/events/index.html.erb</p>
+<h1>Tous nos super events</h1>
+ 
+<h2> Evénements à venir </h2>
+
+<table class="table table-striped">
+  <tr>
+    <th>Nom de l'événement</th>
+    <th>Date de l'événement</th>
+    <th>Lieu de l'événement</th>
+    <th>Créé par</th>
+    <th>Nombre de participants</th>
+    <th></th>
+
+  </tr>
+ 
+  <% @events.each do |event|%> 
+
+    <tr>
+      <td><%= event.title_event %></td>
+      <td><%= event.city %> ,<%= event.country %></td>
+      <td><%= event.starting_date.strftime("%d-%m-%Y")%></td>
+      <td><%= event.creator.email %></td>
+      <td><%= event.number_of_places %></td>
+      <td><%= link_to "Voir l'événement", event_path(event) %></td>
+
+    </tr>
+
+<% end %>
+
+</table>
+
+<%= link_to "Créer mon événement", new_event_path %>
+
+<% unless user_signed_in? %>
+
+<% end%>
+

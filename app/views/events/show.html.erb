@@ -1,2 +1,12 @@
-<h1>Events#show</h1>
-<p>Find me in app/views/events/show.html.erb</p>
+<div class="rounded-top">
+<h1>
+  <%= @event.title_event %>
+</h1>
+<p class="text-center"> Description : <%= @event.description_event %> </p>
+<p class="text-center"> Lieu : <%= @event.city %> <%= @event.country %></p>
+<p class="text-center"> Date : <%= @event.starting_date.strftime("%d-%m-%Y") %> </p>
+<p class="text-center"> Créateur : <%= @event.creator.email %> </p>
+</div>
+  
+
+<%= link_to "Rejoindre l'événement", { :controller => "events", :action => "subscribe"}, class: "btn btn-success" %> 
