@@ -1,0 +1,2 @@
+class Profil < ApplicationRecord
+end
