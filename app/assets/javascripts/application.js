@@ -18,5 +18,7 @@
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
+//= require underscore
+//= require gmaps_google
 //= require_tree .
 

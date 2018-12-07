@@ -6,6 +6,7 @@ class EventsController < ApplicationController
   end
 
   def show
+
   end
 
 
@@ -18,9 +19,9 @@ class EventsController < ApplicationController
 
 
   def create
-  @event = Event.create(event_params)
-  @event.creator = current_user
-  if @event.save
+    @event = Event.create(event_params)
+    @event.creator = current_user
+    if @event.save
   	  @event.attendees << current_user
       flash[:success] = "Votre événement a bien été créé !"    
   		redirect_to @event
@@ -61,6 +62,6 @@ class EventsController < ApplicationController
     end
 
     def event_params
-      params.permit(:title_event, :description_event, :country, :city, :number_of_places, :starting_date,:price, :creator)
+      params.permit(:title_event, :description_event, :country, :city, :number_of_places, :starting_date,:price, :creator, :address, :latitude, :longitude)
     end
 end
