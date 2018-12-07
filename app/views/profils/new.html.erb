@@ -1,0 +1,38 @@
+<%= link_to 'Home', root_path %>
+  <%= form_for @profil do |f| %>
+  <p>
+  <%= f.label :last_name %><br>
+  <%= f.text_field :last_name %>
+  </p>
+  <p>
+  <%= f.label :first_name %><br>
+  <%= f.text_field :first_name %>
+  </p>
+  <p>
+  <%= f.label :age %><br>
+  <%= f.number_field :age %>
+  </p>
+  <p>
+  <%= f.label :title_job %><br>
+  <%= f.text_field :title_job %>
+  </p> 
+  <p>
+  <%= f.label :city %><br>
+  <%= f.text_field :city %>
+  </p>
+  <p>
+  <%= f.label :language1 %><br>
+  <%= f.text_field :language1 %>
+  </p>
+  <p>
+  <%= f.label :language2 %><br>
+  <%= f.text_field :language2 %>
+  </p>
+  <p>
+  <%= f.label :language2 %><br>
+  <%= f.text_field :language2 %>
+  </p>
+  <p>
+  <%= f.submit "Inscription" %>
+  </p>
+  <% end %>
