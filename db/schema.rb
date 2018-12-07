@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_04_154351) do
+ActiveRecord::Schema.define(version: 2018_12_06_210458) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,12 +18,12 @@ ActiveRecord::Schema.define(version: 2018_12_04_154351) do
   create_table "comments", force: :cascade do |t|
     t.datetime "date_comment"
     t.text "text_comments"
-    t.string "event"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "user"
-    t.index ["event"], name: "index_comments_on_event"
-    t.index ["user"], name: "index_comments_on_user"
+    t.bigint "user_id"
+    t.bigint "event_id"
+    t.index ["event_id"], name: "index_comments_on_event_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
   create_table "events", force: :cascade do |t|
@@ -39,19 +39,18 @@ ActiveRecord::Schema.define(version: 2018_12_04_154351) do
     t.integer "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "user"
     t.float "latitude"
     t.float "longitude"
-    t.index ["user"], name: "index_events_on_user"
+    t.bigint "user_id"
+    t.string "address"
+    t.index ["user_id"], name: "index_events_on_user_id"
   end
 
-  create_table "follows", force: :cascade do |t|
-    t.string "event"
-    t.string "user"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["event"], name: "index_follows_on_event"
-    t.index ["user"], name: "index_follows_on_user"
+  create_table "events_users", id: false, force: :cascade do |t|
+    t.bigint "event_id", null: false
+    t.bigint "user_id", null: false
+    t.index ["event_id", "user_id"], name: "index_events_users_on_event_id_and_user_id"
+    t.index ["user_id", "event_id"], name: "index_events_users_on_user_id_and_event_id"
   end
 
   create_table "languages", force: :cascade do |t|
@@ -82,4 +81,7 @@ ActiveRecord::Schema.define(version: 2018_12_04_154351) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "comments", "events"
+  add_foreign_key "comments", "users"
+  add_foreign_key "events", "users"
 end

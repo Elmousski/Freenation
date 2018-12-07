@@ -46,6 +46,7 @@
     <script src="/assets/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 <body>
+
 <header>
 
   <!-- header-bottom area start here -->
@@ -94,8 +95,12 @@
 <!-- header area end here -->
 
 
-
+  <% flash.each do |message_type, message| %>
+  <div class="alert alert-<%= message_type %>"><%= message %></div>
+   <% end %>
     <%= yield %>
+
+
 <!-- Preloader -->
 <%= render 'layouts/footer'  %>
     <!-- ============================
