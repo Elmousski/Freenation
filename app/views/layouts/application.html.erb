@@ -6,7 +6,7 @@
     <meta name="description" content="TRABBLE - Tour, Travel, Travel Agency Template">
     <meta name="keywords" content="Tour, Travel, Travel Agency Template">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TheFreeNation</title>
+    <title>FreeNation</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <!-- Google Fonts Includes -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
@@ -46,11 +46,58 @@
     <script src="/assets/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 <body>
-    <%= yield %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-<!-- Preloader -->
+<header>
 
+  <!-- header-bottom area start here -->
+  <div class="header-bottom-area header-bottom-area-4 header-bottom-3" id="stick-header">
+    <div class="container">
+      <div class="row">
+        <!-- logo area start here -->
+        <div class="col-md-2">
+          <div class="logo-area">
+            <a href="/"><img src="/assets/logo_free_nation.png" width="78" height="78">
+            </a>
+          </div>
+        </div>
+        <!-- logo area end here -->
+        <!-- main menu start here -->
+        <div class="col-md-10 col-sm-10">
+          <nav>
+            <ul class="main-menu text-right">          
+            <% if user_signed_in? %>
+            <li>
+            <img class="counter-elements" height="35px" width="35px" src="/assets/icon/4.jpg">
+            <span style="font-size: 1em; color: Snow;"><i class="fa fa-caret-down"></i></span>
+                <ul class="dropdown">
+                    <li><a href="index.html">My profile</a>
+                    </li>
+                    <li><%= link_to "Log out", destroy_user_session_path , method: :delete %>
+                    </li>
+                </ul>
+            </li>    
+            <% else %>
+              <li><%= link_to "Subscribe", new_user_registration_path %>
+              </li>
+              <li><%= link_to "Login", new_user_session_path %>
+              </li>
+            <% end %> 
+            </ul>
+          </nav>
+        </div>
+        <!-- main menu end here -->
+      </div>
+    </div>
+  </div>
+  <!-- header-bottom area end here -->
+  <!-- header-bottom area end here -->
+</header>
+<!-- header area end here -->
+
+
+
+    <%= yield %>
+<!-- Preloader -->
+<%= render 'layouts/footer'  %>
     <!-- ============================
             JavaScript Files
     ============================= -->
@@ -104,6 +151,5 @@
     <script src="/assets/js/jquery-customselect.js"></script>
     <!-- main js -->
     <script src="/assets/js/custom.js"></script>
-     <%= render 'layouts/footer'  %>
 </body>
 </html>
