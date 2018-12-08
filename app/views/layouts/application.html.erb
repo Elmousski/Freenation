@@ -46,6 +46,7 @@
     <script src="/assets/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 <body>
+
 <header>
 
   <!-- header-bottom area start here -->
@@ -94,10 +95,14 @@
 <!-- header area end here -->
 
 
-
+  <% flash.each do |message_type, message| %>
+  <div class="alert alert-<%= message_type %>"><%= message %></div>
+   <% end %>
     <%= yield %>
-<!-- Preloader -->
 
+
+<!-- Preloader -->
+<%= render 'layouts/footer'  %>
     <!-- ============================
             JavaScript Files
     ============================= -->
@@ -140,12 +145,12 @@
     <script src="/assets/js/assets/revolution/extensions/revolution.extension.navigation.min.js"></script>
     <script src="/assets/js/assets/revolution/extensions/revolution.extension.parallax.min.js"></script>
     <script src="/assets/js/assets/revolution/extensions/revolution.extension.slideanims.min.js"></script>
-    <script src="/assets/js/assets/revolution/extensions/revolution.extension.video.min.js"></script> 
-    <script src="/assets/js/assets/revolution/revolution.js"></script>       
+    <script src="/assets/js/assets/revolution/extensions/revolution.extension.video.min.js"></script>
+    <script src="/assets/js/assets/revolution/revolution.js"></script>
     <!-- Jquery plugin -->
     <script src="/assets/js/plugins.js"></script>
     <!-- select2 js plugin -->
-    <script src="/assets/js/select2.min.js"></script>    
+    <script src="/assets/js/select2.min.js"></script>
     <script src="/assets/js/colors.js"></script>
     <!-- Jquery plugin -->
     <script src="/assets/js/jquery-customselect.js"></script>
