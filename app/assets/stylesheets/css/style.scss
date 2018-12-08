@@ -821,7 +821,10 @@ Tags: 	hotel, resort, tour, tourism, tourist, tours website, travel, traveler, t
 }
 /*===================================================== 06.Counter section css goes here =======================================================*/
  .count-down-bg {
-     background: transparent url("/assets/bgimage/countbg.jpg") repeat scroll 0 0;
+     background: linear-gradient(
+ rgba(0, 0, 0, 0.30), 
+ rgba(0, 0, 0, 0.30)
+ ),transparent url("/assets/bgimage/peru.jpg") repeat scroll 0 0 ;
      background-repeat: no-repeat;
      background-size: cover;
      background-position: center center;
