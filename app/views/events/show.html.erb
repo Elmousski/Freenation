@@ -13,7 +13,9 @@
           <div class="bredcrums-content">
             <h2>Event</h2>
             <ul>
-              <li><a href="index.html">Home</a>
+              <li><a href="/">Home</a>
+              </li>
+              <li><a href="/events">Events</a>
               </li>
               <li class="active"><%= @event.title_event %>
               </li>
@@ -25,6 +27,7 @@
   </div>
 </section><!-- blog breadcrumb version one end here -->
 
+
 <section class="section-paddings single-package-area">
   <div class="container">
     <div class="row">
@@ -35,7 +38,7 @@
             <h2><%= @event.title_event %></h2>
           </div>
           <ul class="package-content">
-            <li>4 Days, 5 Nights</li>
+            <li><%= @event.starting_date.strftime("%d-%m-%Y") %></li>
             <li>
               <span>
                  <i class="fa fa-star"></i>
@@ -43,13 +46,12 @@
                  <i class="fa fa-star"></i>
                  <i class="fa fa-star"></i>
                  <i class="fa fa-star"></i>
-               </span> (3 Reviews)
+               </span>
             </li>
-            <li>Code: LMPROU</li>
-            <li>$500</li>
+            <li><%= @event.price %> €</li>
           </ul>
           <div class="package-features-image">
-            <img src="images/packages/13.jpg" alt="" class="img-responsove border-raduis-3">
+            <img src="/assets/packages/13.jpg" alt="" class="img-responsove border-raduis-3">
           </div>
         </div><!-- tab menu strat -->
 
@@ -57,13 +59,11 @@
           <ul class="package-tab-menu" role="tablist" id="tab7">
             <li role="presentation" class="active"><a href="#description" aria-controls="description" role="tab" data-toggle="tab">Description</a>
             </li>
-            <li role="presentation"><a href="#itinerary" aria-controls="itinerary" role="tab" data-toggle="tab">Tour Itinerary</a>
+            <li role="presentation"><a href="#video" aria-controls="video" role="tab" data-toggle="tab">Participants</a>
             </li>
             <li role="presentation"><a href="#map" aria-controls="map" role="tab" data-toggle="tab">Tour Map</a>
             </li>
-            <li role="presentation"><a href="#video" aria-controls="video" role="tab" data-toggle="tab">Videos</a>
-            </li>
-            <li role="presentation"><a href="#reviews" aria-controls="reviews" role="tab" data-toggle="tab">Reviews (3)</a>
+            <li role="presentation"><a href="#reviews" aria-controls="reviews" role="tab" data-toggle="tab">Comments</a>
             </li>
           </ul>
         </div><!-- tab menu end -->
@@ -75,29 +75,10 @@
             <div role="tabpanel" class="tab-pane fade in active" id="description">
               <div class="row">
                 <!-- left content -->
-                <div class="col-md-8 col-sm-8">
+                <div class="col-md-7 col-sm-7">
                   <div class="tour-description">
                     <h4>Tour Description</h4>
-                    <p>Tourist attractions people foreign sleep overnight housing. Gerimrany group discount tour operator. Airplane couchsurfing Moi scow ma ps uncharted luxury train guest tour operator German y busre laxation. Paris overnight Japan Tripit territory international carren tal Pacific outdoor Turkey. Country international to urist attractions mil es train Moscow guide. Japan horse riding money Bacel ona Buda pest yach t passport animals package China hitchh iking discover deal. Russia St. Petersburg Cuba creditcard bookin g discover Amst erdam flying. Freedom ani mals car rental booki ng. GEO Instagram group discount Brasil Germany gateway activ e lifestyle. Transit sailing kayak diary Europe chartering.</p>
-                  </div>
-                  <div class="chosse-packge">
-                    <h4>Why you choose this package</h4>
-                    <div class="row">
-                      <div class="col-md-6 col-sm-6">
-                        <ul class="packaging-contents">
-                          <li><i class="fa fa-angle-double-right"></i>Sed legere graecis ex.</li>
-                          <li><i class="fa fa-angle-double-right"></i>Sed legere graecis ex.</li>
-                          <li><i class="fa fa-angle-double-right"></i>Sed legere graecis ex.</li>
-                        </ul>
-                      </div>
-                      <div class="col-md-6 col-sm-6">
-                        <ul class="packaging-contents packaging-contents-right pull-right">
-                          <li><i class="fa fa-angle-double-right"></i>Sed legere graecis ex.</li>
-                          <li><i class="fa fa-angle-double-right"></i>Sed legere graecis ex.</li>
-                          <li><i class="fa fa-angle-double-right"></i>Sed legere graecis ex.</li>
-                        </ul>
-                      </div>
-                    </div>
+                    <p><%= @event.description_event %></p>
                   </div>
                 </div><!-- left-content -->
 
@@ -107,26 +88,24 @@
                     <div class="info-title">
                       <h4>Additional Info</h4>
                       <div class="row">
-                        <div class="col-md-7 col-sm-7">
+                        <div class="col-md-6 col-sm-6">
                           <div class="info-list">
-                            <p><span><i class="fa fa-map-marker"></i></span>Location</p>
-                            <p><span><i class="fa fa-clock-o"></i></span>Duration</p>
-                            <p><span><i class="fa fa-user"></i></span>Min Age</p>
-                            <p><span><i class="fa fa-users"></i></span>Max People</p>
-                            <p><span><i class="fa fa-plane"></i></span>Landing</p>
-                            <p><span><i class="fa fa-calendar-check-o"></i></span>Check In</p>
-                            <p><span><i class="fa fa-calendar-minus-o"></i></span>Check Out</p>
+                            <p><span><i class="fa fa-map-marker"></i></span> Location</p>
+                            <p><span><i class="far fa-clock"></i></span> Duration</p>
+                            <p><span><i class="fa fa-users"></i></span> Max People</p>
+                            <p><span><i class="fa fa-plane"></i></span> Landing</p>
+                            <p><span><i class="fas fa-receipt"></i></span> Check In</p>
+                            <p><span><i class="fas fa-receipt"></i></span> Check Out</p>
                           </div>
                         </div>
                         <div class="col-md-5 col-sm-5">
                           <div class="info-details">
-                            <p>Thailand</p>
-                            <p>4 days</p>
-                            <p>12+</p>
-                            <p>5</p>
-                            <p>Thailand</p>
-                            <p>15/5/2018</p>
-                            <p>19/5/2018</p>
+                            <p><%= @event.country %></p>
+                            <p>ToDo</p>
+                            <p><%= @event.number_of_places%></p>
+                            <p><%= @event.city %></p>
+                            <p><%= @event.starting_date%></p>
+                            <p><%= @event.ending_date%></p>
                           </div>
                         </div>
                       </div>
@@ -136,61 +115,31 @@
               </div>
             </div>
 
-            <div role="tabpanel" class="tab-pane fade" id="itinerary">
+            <!-- video tab content start -->
+            <div role="tabpanel" class="tab-pane fade" id="video">
               <div class="row">
-                <div class="col-md-12 col-sm-12">
+                <div class="col-md-11 col-sm-11">
                   <div class="tour-description">
-                    <h4>Tour Description</h4>
-                    <div class="main-timeline">
-                      <!-- single timeline -->
-                      <div class="timeline">
-                        <div class="timeline-content left">
-                          <span class="timeline-icon">1</span>
-                          <h4>Day 1: Meeting The All Members</h4>
-                          <p>Tourist attractions people foreign sleep overnight housing. Gerimrany group discount tour operator. Airplane couchsurfing Moi scow ma ps uncharted luxury train guest tour operator German y busre laxation. Paris overnight Japan Tripit territory international carren tal Pacific outdoor Turkey. Country international to urist attractions mil es train Moscow guide. Japan horse riding money Bacel ona Buda pest yach.</p>
-                        </div>
-                      </div><!-- single timeline -->
+                    <h4>Participants</h4>
+              <p>Don't hesitate to ask your questions in the contact area or contact <%= @event.creator.email %></p>
+          <% @event.attendees.each do |attendee| %> 
+              <p><%= attendee.email %> <%= link_to('Voir le profil du participant', user_path(attendee)) %> 
 
-                      <!-- single timeline -->
-                      <div class="timeline">
-                        <div class="timeline-content left">
-                          <span class="timeline-icon">2</span>
-                          <h4>Day 2: Unforgettable Journey</h4>
-                          <p>Tourist attractions people foreign sleep overnight housing. Gerimrany group discount tour operator. Airplane couchsurfing Moi scow ma ps uncharted luxury train guest tour operator German y busre laxation. Paris overnight.</p>
-                        </div>
-                      </div><!-- single timeline -->
+          <% end %>
 
-                      <!-- single timeline -->
-                      <div class="timeline">
-                        <div class="timeline-content left">
-                          <span class="timeline-icon">3</span>
-                          <h4>Day 3: Night Party</h4>
-                          <p>Tourist attractions people foreign sleep overnight housing. Gerimrany group discount tour operator. Airplane couchsurfing Moi scow ma ps uncharted luxury train guest tour operator German y busre laxation. Paris overnight.</p>
-                        </div>
-                      </div><!-- single timeline -->
-
-                      <!-- single timeline -->
-                      <div class="timeline">
-                        <div class="timeline-content left">
-                          <span class="timeline-icon">4</span>
-                          <h4>Day 4: Time To Say Good Bay</h4>
-                          <p>Tourist attractions people foreign sleep overnight housing. Gerimrany group discount tour operator. Airplane couchsurfing Moi scow ma ps uncharted luxury train guest tour operator German y busre laxation. Paris overnight.</p>
-                        </div>
-                      </div><!-- single timeline -->
-                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </div><!-- video tab content end -->
 
             <div role="tabpanel" class="tab-pane fade" id="map">
               <div class="row">
-                <div class="col-md-12 col-sm-12">
+                <div class="col-md-11 col-sm-11">
                   <div class="tour-description">
                     <h4>Map Tour</h4>
                     <!-- map -->
                     <div class="mapp" id="overlay">
-                      <iframe id="maping" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3350.701132954845!2d-96.89708368545975!3d32.879626086054884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864e9d666937c1f7%3A0xae26e896218f405!2sUSA+Bowl!5e0!3m2!1sbn!2sbd!4v1493296407400" allowfullscreen></iframe>
+                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10498.641906200692!2d2.4238914832412326!3d48.864684418713324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd75aa923fdf4ed1b!2sMega+Digital!5e0!3m2!1sfr!2sfr!4v1544374441536" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
                     </div><!-- map -->
                   </div>
                 </div>
@@ -198,28 +147,11 @@
             </div>
 
             <!-- video tab content start -->
-            <div role="tabpanel" class="tab-pane fade" id="video">
-              <div class="row">
-                <div class="col-md-12 col-sm-12">
-                  <div class="tour-description">
-                    <h4>Video</h4>
-                    <!-- Video -->
-                    <div class="tab-video-area video-bg">
-                      <div class="video-play-btn">
-                        <a href="https://www.youtube.com/watch?v=UQneDljrWm0" class="video_iframe"><span><i class="fa fa-play"></i></span></a>
-                      </div>
-                    </div><!-- Video -->
-                  </div>
-                </div>
-              </div>
-            </div><!-- video tab content end -->
-
-            <!-- video tab content start -->
             <div role="tabpanel" class="tab-pane fade" id="reviews">
               <div class="row">
-                <div class="col-md-12 col-sm-12">
+                <div class="col-md-11 col-sm-11">
                   <div class="tour-description">
-                    <h4>Reviews</h4>
+                    <h4>Comments</h4>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam nulla, omnis impedit possimus, quos inventore quo. Rem asperiores culpa, accusantium, reiciendis sint nihil excepturi minima officiis voluptatum omnis qui. Quisquam blanditiis quaerat commodi autem, ducimus, perspiciatis unde est nisi dolore consequatur expedita sint placeat inventore, alias, perferendis nobis adipisci tempore excepturi cupiditate harum odit ipsa deserunt. Quaerat praesentium odio voluptatem commodi vitae dolore, a amet suscipit eligendi ut repellendus ducimus tempora, est, tempore dignissimos expedita cupiditate quisquam minima dolores possimus. In porro vitae provident esse voluptas cum inventore magnam praesentium quaerat veritatis, explicabo non doloremque rerum, nulla maxime architecto, libero.</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam nulla, omnis impedit possimus, quos inventore quo. Rem asperiores culpa, accusantium, reiciendis sint nihil excepturi minima officiis voluptatum omnis qui. Quisquam blanditiis quaerat commodi autem, ducimus, perspiciatis unde est nisi dolore consequatur expedita sint placeat inventore, alias, perferendis nobis adipisci tempore excepturi cupiditate harum odit ipsa deserunt. Quaerat praesentium odio voluptatem commodi vitae dolore, a amet suscipit eligendi ut repellendus ducimus tempora, est, tempore dignissimos expedita cupiditate quisquam minima dolores possimus. In porro vitae provident esse voluptas cum inventore magnam praesentium quaerat veritatis, explicabo non doloremque rerum, nulla maxime architecto, libero.</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur totam accusamus, libero, eaque cupiditate veritatis placeat dignissimos voluptatum, alias similique ad laudantium perferendis dolore ipsa vero iure praesentium asperiores quia rem maxime rerum, labore sed. Dolorem, nisi, inventore! Explicabo vel cupiditate quidem at, deleniti nostrum. Possimus cumque, minima maxime at.</p>
@@ -231,99 +163,63 @@
         </div><!-- tab content end -->
       </div><!-- single package tab with details -->
 
+
+
+
       <!-- booking form start here -->
       <div class="col-md-4 col-sm-12">
         <aside>
           <div class="booking-form">
             <div class="booking-title">
-              <h2>Book This Tour</h2>
+              <h2>Il reste X place</h2>
             </div>
             <form action="#" method="post">
               <div class="form-group">
-                <input type="text" class="form-control" id="name" placeholder="Name *">
-              </div>
-              <div class="form-group">
-                <input type="email" class="form-control" id="confirm_email" placeholder="Confirm E-mail *">
-              </div>
-              <div class="form-group">
-                <input type="tel" class="form-control" id="number" placeholder="Phone Number *">
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" id="booking-date" placeholder="dd-mm-yy *">
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" id="ticket" placeholder="Number Of Tickets *">
-              </div>
-              <div class="form-group">
-                <textarea name="messgae" id="message" cols="30" rows="10" class="form-control" placeholder="Message *"></textarea>
-              </div>
-              <div class="form-group">
-                <button type="submit" class="check-availability">Check Availability</button>
-              </div>
-              <div class="form-group">
-                <button type="submit" class="booking-confirm hvr-shutter-out-horizontal">Book Now</button>
+<% if @event.attendees.count <= @event.number_of_places && unless @event.attendees.include? current_user %>
+<%= link_to "JOIN THE EVENT", { :controller => "events", :action => "subscribe"}, class: "btn btn-success booking-confirm hvr-shutter-out-horizontal" %>
+<% else  @event.attendees.include? current_user %>
+<p class="text-center"> Deja inscrit ! :) </p>
+<% end %>
+<% end %>
               </div>
             </form>
           </div>
         </aside><!-- adverestment start here-->
 
+
         <div class="adding-form">
           <div class="addfor-bg">
             <div class="add-content">
-              <h3>Any Question?</h3>
-              <p>Lorem ipsum dolor sit amet, consectet ur adipiscing elit, sedpr do eiusmod tempor incididunt ut.</p>
+              <h3>Organisator</h3>
+              <p>Prénom + Faire apparaître la photo du gars en rond</p>
               <ul class="contact-for-add">
-                <li><img src="images/icon/phone.png" alt="">+123-456-7890</li>
-                <li><img src="images/icon/gmail.png" alt="">info@yourcompany.com</li>
+                <li><img src="/assets/icon/phone.png" alt="">lien vers son profil</li>
               </ul>
             </div>
           </div>
         </div><!-- adverestment start here-->
+
+
+        <div class="adding-form">
+          <div class="addfor-bg">
+            <div class="add-content">
+              <h3>Any Question?</h3>
+              <p>Don't hesitate to ask us</p>
+              <ul class="contact-for-add">
+                <li><img src="/assets/icon/phone.png" alt="">+33 6 26 01 28 01</li>
+                <li><img src="/assets/icon/gmail.png" alt="">info@yourcompany.com</li>
+              </ul>
+            </div>
+          </div>
+        </div><!-- adverestment start here-->
+
+
+        
       </div><!-- booking form end here -->
     </div>
   </div>
 </section>
 
-<div class="rounded-top">
-<h1 class="text-center">
-  
-</h1>
-<p class="text-center"> Description : <%= @event.description_event %> </p>
-<p class="text-center"> Lieu : <%= @event.city %> <%= @event.country %></p>
-<p class="text-center"> Date : <%= @event.starting_date.strftime("%d-%m-%Y") %> </p>
-<p class="text-center"> Créateur : <%= @event.creator.email %> </p>
-</div>
-  
- 
-<% if @event.attendees.count <= @event.number_of_places && unless @event.attendees.include? current_user %>
-<p class="text-center"> <%= link_to "Rejoindre l'événement", { :controller => "events", :action => "subscribe"}, class: "btn btn-success" %> </p>
-<% else  @event.attendees.include? current_user %>
-<p class="text-center"> Deja inscrit ! :) </p>
-<% end %>
-<% end %>
-
-
-<h2> Liste des participants </h2>
-
-<table class="table table-striped">
-      <tr>
-      <th>Nom</th>
-      <th>Adresse mail</th>
-      <th></th>
-
-    </tr>
-
-  <% @event.attendees.each do |attendee| %> 
-    <tr>
-    <td> <%= attendee.email %> </td>
-    <td> <%= link_to('Voir le profil du participant', user_path(attendee)) %> </td>
-    </tr>
-    <% end %>
-  </table>
-
-<div style='width: 800px;'>
-  <div id="map" style='width: 800px; height: 400px;'></div>
-</div>
 
 <script type="text/javascript">
 handler = Gmaps.build('Google');
