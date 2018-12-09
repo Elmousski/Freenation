@@ -11,9 +11,16 @@
   <%= @event.title_event %>
 </h1>
 <p class="text-center"> Description : <%= @event.description_event %> </p>
-<p class="text-center"> Lieu : <%= @event.city %> <%= @event.country %></p>
+<p class="text-center"> Lieu : <%= @event.city %> <%= @event.address %></p>
 <p class="text-center"> Date : <%= @event.starting_date.strftime("%d-%m-%Y") %> </p>
 <p class="text-center"> Créateur : <%= @event.creator.email %> </p>
+  <% if @event.picture.attached? %>
+   <p class="text-center"> Image d'illustration : <%= image_tag @event.picture %> </p>
+
+  <% else %>
+  
+  <% end %>
+
 </div>
   
  
