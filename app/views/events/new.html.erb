@@ -1,6 +1,36 @@
+<!-- blog breadcrumb version one strat here -->
+<section class="breadcrumb-blog-version-one">
+  <div class="single-bredcurms" style="background-image:url('/assets/packages/bg.jpg');">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="bredcrums-content">
+            <h2>New Event</h2>
+            <ul>
+              <li><a href="/">Home</a>
+              </li>
+              <li><a href="/events">Events</a>
+              </li>
+              <li class="active">New event
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section><!-- blog breadcrumb version one end here -->
+
+
+<section class="section-paddings single-package-area">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12">
+          <div class="single-package-title">
+            <aside><div class="booking-form">
+        
 <% if user_signed_in? %>
-<h1 class="text-center"> Créer un nouvel event !</h1>
-<p class="text-center"> <%= current_user.email %>, merci de renseigner ces informations afin de créer votre événement ! </p>
+
 
 <%= form_tag (events_path), multipart: true do %>
  
@@ -16,44 +46,70 @@
     </div>
   <% end %>
 
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
-    
-  <p> <%= label_tag 'title_event', "Quel est le nom de votre event ?"  %> </p>
-  <p> <%= text_field_tag(:title_event) %> </p>
-
-  <p> <%= label_tag 'description_event', "En deux mots, pouvez-vous décrire votre event ?" %> </p>
-  <p> <%= text_field_tag(:description_event) %> </p>
-
-  <p> <%= label_tag 'address', "address ?" %> </p>
-  <p> <%= text_field_tag(:address) %> </p>
-
-  <p> <%= label_tag 'number_of_places', "combier de place ?" %> </p>
-  <p> <%= text_field_tag(:number_of_places) %> </p>
-
-  <p> <%= label_tag 'price', "Combien pour participer ?" %> </p>
-  <p> <%= text_field_tag(:price) %> </p>
-
-  <p> <%= label_tag 'starting_date', "Quand se déroule votre event ?" %> </p>
-  <p> <%= date_field_tag(:starting_date) %> </p>
-
-  <p> <%= label_tag 'picture', "Une image d'illustration ?" %> </p>
-  <p> <%= file_field_tag(:picture) %> </p>
-
+  <div class="form-group">
+      <%= label_tag 'title_event', "What's the name of the event ?", class: "h4" %></br>
+      <%= text_field_tag :title_event, nil, :required => true, placeholder: "Title", autofocus: true, class: 'form-control' %>
   </div>
-</div>
 
-
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
-<p> <%= submit_tag 'Je crée mon event', class: "btn btn-primary"%></p>
-
+  <div class="form-group">    
+      <%= label_tag 'description_event', "Could you describe the event ?", class: "h4" %></br>
+      <%= text_area_tag :description_event, nil, :required => true, placeholder: "Description (300 characters min)", class: 'form-control' %>
   </div>
-</div>
+
+  <div class="form-group">
+      <%= label_tag 'address', "What is the adress of the meeting point ?", class: "h4" %></br>
+      <%= text_field_tag :address, nil, :required => true, placeholder: "Adress", class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+      <%= label_tag 'number_of_places', "How many people are attended ?", class: "h4" %></br>
+      <%= text_field_tag :number_of_places, nil, :required => true, placeholder: "Number", class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+      <%= label_tag 'price', "How much is it per person ?", class: "h4" %></br>
+      <%= text_field_tag :price, nil, :required => true, placeholder: "Price", class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+      <%= label_tag 'starting_date', "When will start the event ?", class: "h4" %></br>
+      <%= date_field_tag :starting_date, nil, :required => true %>
+  </div>
+
+  <div class="form-group">
+      <%= label_tag 'ending_date', "When will end the event ?", class: "h4" %></br>
+      <%= date_field_tag :ending_date, nil, :required => true %>
+  </div>
+
+  <div class="form-group">
+      <%= label_tag 'picture', "A picture to present the event ? (767 X 450px)", class: "h4" %></br>
+      <%= file_field_tag :picture %>
+  </div>
+ </br>
+  <div class="form-group">
+      <%= submit_tag 'Create', class: "booking-confirm hvr-shutter-out-horizontal" %>
+  </div>
+
 <% end %>
 
 <% else %>
 
-Veuillez vous connecter pour creer un voyage LIEN
+Login to create an event. 
 
 <% end %>
+        
+
+            
+            </div>
+          </aside>
+        </div>
+      </div><!-- booking form end here -->
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
