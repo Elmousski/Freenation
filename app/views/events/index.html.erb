@@ -7,9 +7,9 @@
           <div class="bredcrums-content">
             <h2>Events</h2>
             <ul>
-              <li><a href="index.html">Home</a>
+              <li><a href="/">Home</a>
               </li>
-              <li class="active">Events</li>
+              <li class="/events/">Events</li>
             </ul>
           </div>
         </div>
@@ -38,7 +38,7 @@
           </div>
           <div class="package-content">
             <h3><%= event.title_event %></h3>
-            <p><%= event.city %> ,<%= event.country %>
+            <p><%= event.address %>
               <%= event.starting_date.strftime("%d-%m-%Y")%>
             </p>
           </div>
