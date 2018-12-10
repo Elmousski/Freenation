@@ -29,7 +29,7 @@
         <div class="single-package">
           <div class="package-image">
           <% if event.picture.attached? %>
-          <%= image_tag "#{event.picture}" %>
+          <%= image_tag event.picture %>
           <% else %>
           <img src="/assets/packages/4.jpg">
           <% end %>
