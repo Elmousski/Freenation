@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
   resources :users
   resources :charges
-
+  resources :home, only: [:index, :new, :create]
   resources :events
   get "events/subscribe/:id", to: "events#subscribe"
 
