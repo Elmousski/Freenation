@@ -20,25 +20,25 @@
   <div class="col-md-6 col-md-offset-3">
     
   <p> <%= label_tag 'title_event', "Quel est le nom de votre event ?"  %> </p>
-  <p> <%= text_field_tag(:title_event) %> </p>
+  <p> <%= text_field_tag(:title_event, nil, :required => true) %> </p>
 
   <p> <%= label_tag 'description_event', "En deux mots, pouvez-vous décrire votre event ?" %> </p>
-  <p> <%= text_field_tag(:description_event) %> </p>
+  <p> <%= text_field_tag(:description_event, nil, :required => true) %> </p>
 
   <p> <%= label_tag 'address', "address ?" %> </p>
-  <p> <%= text_field_tag(:address) %> </p>
+  <p> <%= text_field_tag(:address, nil, :required => true) %> </p>
 
   <p> <%= label_tag 'number_of_places', "combier de place ?" %> </p>
-  <p> <%= text_field_tag(:number_of_places) %> </p>
+  <p> <%= text_field_tag(:number_of_places, nil, :required => true) %> </p>
 
   <p> <%= label_tag 'price', "Combien pour participer ?" %> </p>
-  <p> <%= text_field_tag(:price) %> </p>
+  <p> <%= text_field_tag(:price, nil, :required => true) %> </p>
 
   <p> <%= label_tag 'starting_date', "Quand se déroule votre event ?" %> </p>
-  <p> <%= date_field_tag(:starting_date) %> </p>
+  <p> <%= date_field_tag(:starting_date, nil, :required => true) %> </p>
 
   <p> <%= label_tag 'picture', "Une image d'illustration ?" %> </p>
-  <p> <%= file_field_tag(:picture) %> </p>
+  <p> <%= file_field_tag(:picture, nil, :required => true) %> </p>
 
   </div>
 </div>
