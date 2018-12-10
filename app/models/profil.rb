@@ -1,6 +1,4 @@
 class Profil < ApplicationRecord
-
-	belongs_to :creator, class_name: "User", foreign_key: "user_id"
-    has_and_belongs_to_many :attendees, class_name: "User"
-
+	permit_params :last_name, :first_name, :age, :title_job, :life_description, :city, :language1, :language2, :language3
+	has_one :user
 end
