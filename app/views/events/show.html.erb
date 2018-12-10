@@ -51,7 +51,11 @@
             <li><%= @event.price %> €</li>
           </ul>
           <div class="package-features-image">
-            <img src="/assets/packages/13.jpg" alt="" class="img-responsove border-raduis-3">
+          <% if event.picture.attached? %>
+          <%= image_tag event.picture %>
+          <% else %>
+         <img src="/assets/packages/13.jpg" alt="" class="img-responsove border-raduis-3">
+          <% end %>
           </div>
         </div><!-- tab menu strat -->
 
