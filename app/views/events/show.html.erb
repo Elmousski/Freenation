@@ -51,8 +51,8 @@
             <li><%= @event.price %> €</li>
           </ul>
           <div class="package-features-image">
-          <% if event.picture.attached? %>
-          <%= image_tag event.picture %>
+          <% if @event.picture.attached? %>
+          <%= image_tag @event.picture %>
           <% else %>
          <img src="/assets/packages/13.jpg" alt="" class="img-responsove border-raduis-3">
           <% end %>
