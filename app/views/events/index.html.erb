@@ -21,7 +21,7 @@
 
 <section class="blog-contents-version-one pt-100 pb-70 popular-packages">
       <div class="container">
-        <div class="row">
+        <div class="row"><!--begin row -->
                 <% @events.each do |event|%>
                               <div class="col-md-4 col-sm-6">
                                     <div class="single-package">
@@ -36,22 +36,40 @@
                                           </div>
                                           <div class="package-content">
                                                 <h3><%= event.title_event %></h3>
-                                                <p><%= event.city %>, <%= event.price %>
-                                                  <%= event.starting_date.strftime("%d-%m-%Y")%>
+                                                <p><%= event.city %>, <%= event.starting_date.strftime("%d-%m-%Y")%>, 
                                                 </p>
                                           </div>
                                           <div class="package-calto-action">
                                               <ul class="ct-action">
                                                 <li><%= link_to "Voir l'événement", event_path(event), class: "travel-booking-btn hvr-shutter-out-horizontal" %>
                                                 </li>
+                                                <li><span><strong><%= event.price %> €</strong></span></li>
                                               </ul>
                                           </div>
                                     </div>
                               </div><!--end single package -->
                               <% end %>
-          </div>
+          </div><!--end row -->
+
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <ul class="pagination">
+            <%= will_paginate @events, :container => false %>
+        </ul>
+      </div><!-- pagination end here -->
+    </div>
+
+
+
+
+
+
         </div>
 </section><!-- single popular destination  end-->
+
+
+
+
 
 
 

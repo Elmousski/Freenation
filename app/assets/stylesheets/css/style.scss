@@ -2033,7 +2033,7 @@ Tags: 	hotel, resort, tour, tourism, tourist, tours website, travel, traveler, t
 /*===================================================== 22.home version 2 discount section css goes here =======================================================*/
  .discount-bg {
      clear: both;
-     background: red url("../images/bgimage/tagmahal.jpg");
+     background: url( /assets/bgimage/bg.jpg);
      background-repeat: no-repeat;
      background-size: cover;
      background-position: center center;
@@ -4522,4 +4522,18 @@ Tags: 	hotel, resort, tour, tourism, tourist, tours website, travel, traveler, t
 }
 .related-title h2 {
     margin-left: -32px;
+}
+
+
+
+/*========= Notre CSS ================*/
+
+.profile-userpic img {
+ float: none;
+ margin: 0 auto;
+ width: 70%;
+ height: 70%;
+ -webkit-border-radius: 50% !important;
+ -moz-border-radius: 50% !important;
+ border-radius: 50% !important;
 }
