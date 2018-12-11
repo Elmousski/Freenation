@@ -21,4 +21,3 @@
 //= require underscore
 //= require gmaps_google
 //= require_tree .
-

@@ -12,7 +12,7 @@ Tags: 	hotel, resort, tour, tourism, tourist, tours website, travel, traveler, t
 02. Header css here / header
 03. Slider css here
 04. Tab-search-area section
-05. Popular packajge section css 
+05. Popular packajge section css
 06. Counter  section css
 07. popular destination strat section css
 08. Choose us strat section css
@@ -41,10 +41,10 @@ Tags: 	hotel, resort, tour, tourism, tourist, tours website, travel, traveler, t
 30. discount & deal section css
 31. Video section css
 32. online shop section css
-33. thailand-trip section css 
+33. thailand-trip section css
 34. Testimonial two section css
 
-35. Home version 4 header top section 
+35. Home version 4 header top section
 36. Home version 4 slider section start
 37. Home version 4 tabbased search section start here
 38. Home version 4 popular package section start
@@ -57,7 +57,7 @@ Tags: 	hotel, resort, tour, tourism, tourist, tours website, travel, traveler, t
 45. Home version 5 slider section start
 46. Home version 5 slider section start
 
-47. Home version 5 discount section 
+47. Home version 5 discount section
 78. Home version 5 Our Hottest tours section
 79. Home version 5 testimonial 5 section
 50. Home version 5 recomended hotel section
@@ -72,6 +72,12 @@ Tags: 	hotel, resort, tour, tourism, tourist, tours website, travel, traveler, t
 /*====================== 01. Theme Base CSS =========================*/
  .ui-datepicker.ui-widget.ui-widget-content.ui-helper-clearfix.ui-corner-all {
      z-index: 28 !important;
+}
+#cassecouille {
+  background-color: transparent;
+  width: 50px;
+  height: 20px;
+  color: white;
 }
  .pt-100 {
      padding-top: 100px;
@@ -822,7 +828,7 @@ Tags: 	hotel, resort, tour, tourism, tourist, tours website, travel, traveler, t
 /*===================================================== 06.Counter section css goes here =======================================================*/
  .count-down-bg {
      background: linear-gradient(
- rgba(0, 0, 0, 0.30), 
+ rgba(0, 0, 0, 0.30),
  rgba(0, 0, 0, 0.30)
  ),transparent url("/assets/bgimage/peru.jpg") repeat scroll 0 0 ;
      background-repeat: no-repeat;
@@ -4440,7 +4446,7 @@ Tags: 	hotel, resort, tour, tourism, tourist, tours website, travel, traveler, t
 
 /*========= 05.popular packajge section css goes here ================*/
  .popular-packages .single-package .package-image{
-     overflow: hidden;     
+     overflow: hidden;
  }
 .popular-packages .single-package .package-image img {
      transform: scale(1.1);
