@@ -68,19 +68,19 @@
 						<h3>Quick Contact</h3>
 					</div>
 					<div class="footer-contact-form">
-			<%= form_for @contact, url: home_index_path, remote: true do |f| %>
+			<!--  <%= form_for @contact, url: home_index_path, remote: true do |f| %> -->
 					<ul class="footer-form-element">
 						<li>
 							<%= f.text_field  :name, required: true, class: "footer-form-element",
-														 placeholder: "Name" %></br>
+														placeholder: "Name" %></br>
 						</li>
 						<li>
 						 <%= f.text_field :email, required: true, class: "footer-form-element",
-														 placeholder: "Email" %></br>
+														placeholder: "Email" %></br>
 						</li>
 						<li>
 						<%= f.text_area :message, rows: 8, cols: 40, required: true, class: "message",
-															placeholder: "Send a message to Alex."%></br>
+														placeholder: "Send a message to Alex."%></br>
 						</li>
 						<div class= "hidden">
 							<%= f.label :nickname %>
@@ -94,35 +94,7 @@
 				<% end %>
 			</div>
 		</div>
-		</div><!-- footer contact -->
-			<!-- footer contact
-			<div class="col-md-3 col-sm-6 f-phone-responsive">
-				<div class="single-footer">
-					<div class="footer-title">
-						<h3>Quick Contact</h3>
-					</div>
-					<div class="footer-contact-form">
-													<form action="#">
-														<ul class="footer-form-element">
-															<li>
-																<input type="text" name="email" id="email" placeholder="" value="Email Address" onblur="if(this.value==''){this.value='Email Address'}" onfocus="if(this.value=='Email Address'){this.value=''}">
-															</li>
-															<li>
-																<textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
-															</li>
-															<li>
-																<button>Send</button>
-															</li>
-														</ul>
-													</form>
-					</div>
-				</div>
-			</div>footer contact -->
-
-
-
-
-
+		</div>
 		</div>
 
 		<div class="row">
