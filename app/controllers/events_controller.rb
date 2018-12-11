@@ -2,7 +2,7 @@ class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
 
   def index
-    @events = Event.all.order('created_at ASC')
+    @events = Event.all.order('created_at DESC').paginate(page: params[:page], per_page: 6)
   end
 
   def show
@@ -62,6 +62,6 @@ class EventsController < ApplicationController
     end
 
     def event_params
-      params.permit(:title_event, :picture, :description_event, :country, :city, :number_of_places, :starting_date,:price, :creator, :address, :latitude, :longitude,)
+      params.permit(:title_event, :picture, :description_event, :ending_date, :country, :city, :number_of_places, :starting_date,:price, :creator, :address, :latitude, :longitude,)
     end
 end

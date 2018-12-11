@@ -7,5 +7,6 @@ class User < ApplicationRecord
       has_many :events
       has_many :follows
       has_many :comments
+      has_one :profil
 
 end

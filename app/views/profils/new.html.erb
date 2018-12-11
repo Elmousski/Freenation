@@ -1,5 +1,29 @@
-<%= link_to 'Home', root_path %>
-  <%= form_for @profil do |f| %>
+<!-- blog breadcrumb version one strat here -->
+<section class="breadcrumb-blog-version-one">
+  <div class="single-bredcurms" style="background-image:url('/assets/packages/bg.jpg');">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="bredcrums-content">
+            <h2>PROFIL</h2>
+            <ul>
+              <li><a href="/">Home</a>
+              </li>
+              <li><a href="/events">Profil</a>
+              </li>
+              <li><a class="active"> New </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section><!-- blog breadcrumb version one end here -->
+
+
+<% if user_signed_in? %>
+ <%= form_for Profil.new do |f| %>
   <p>
   <%= f.label :last_name %><br>
   <%= f.text_field :last_name %>
@@ -33,6 +57,12 @@
   <%= f.text_field :language2 %>
   </p>
   <p>
-  <%= f.submit "Inscription" %>
+  <%= f.submit "cree" %>
   </p>
   <% end %>
+
+  <% else %>
+
+Veuillez vous connecter pour voir la page du voyages LIEN
+
+<% end %>
