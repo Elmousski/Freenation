@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.1'
+
 gem 'gmaps4rails'
 gem 'geocoder'
 gem 'bootstrap'
@@ -45,3 +46,6 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'rails_12factor'
+gem 'faker'
+gem 'will_paginate'
+gem 'will_paginate-bootstrap' 

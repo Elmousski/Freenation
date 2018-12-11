@@ -3,4 +3,5 @@ class Event < ApplicationRecord
   has_and_belongs_to_many :attendees, class_name: "User"
   geocoded_by :address
   after_validation :geocode
+  has_one_attached :picture
 end

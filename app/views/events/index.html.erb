@@ -1,40 +1,75 @@
-<% if user_signed_in? %>
-<h1>Tous nos super events</h1>
+<!-- blog breadcrumb version one strat here -->
+<section class="breadcrumb-blog-version-one">
+  <div class="single-bredcurms" style="background-image:url('/assets/bercums/Single-Package-Details.jpg');">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="bredcrums-content">
+            <h2>Events</h2>
+            <ul>
+              <li><a href="index.html">Home</a>
+              </li>
+              <li class="active">Events</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section><!-- blog breadcrumb version one end here -->
  
-<h2> Evénements à venir </h2>
 
-<table class="table table-striped">
-  <tr>
-    <th>Nom de l'événement</th>
-    <th>Date de l'événement</th>
-    <th>Lieu de l'événement</th>
-    <th>Créé par</th>
-    <th>Nombre de participants</th>
-    <th></th>
+<section class="blog-contents-version-one pt-100 pb-70 popular-packages">
+      <div class="container">
+        <div class="row"><!--begin row -->
+                <% @events.each do |event|%>
+                              <div class="col-md-4 col-sm-6">
+                                    <div class="single-package">
+                                          <div class="package-image">
+                                                    
+                                                <% if event.picture.attached? %>
+                                                <%= image_tag event.picture %>
+                                                <% else %>
+                                                <img src="/assets/packages/4.jpg">
+                                                <% end %>
 
-  </tr>
- 
-  <% @events.each do |event|%> 
+                                          </div>
+                                          <div class="package-content">
+                                                <h3><%= event.title_event %></h3>
+                                                <p><%= event.city %>, <%= event.starting_date.strftime("%d-%m-%Y")%>, 
+                                                </p>
+                                          </div>
+                                          <div class="package-calto-action">
+                                              <ul class="ct-action">
+                                                <li><%= link_to "Voir l'événement", event_path(event), class: "travel-booking-btn hvr-shutter-out-horizontal" %>
+                                                </li>
+                                                <li><span><strong><%= event.price %> €</strong></span></li>
+                                              </ul>
+                                          </div>
+                                    </div>
+                              </div><!--end single package -->
+                              <% end %>
+          </div><!--end row -->
 
-    <tr>
-      <td><%= event.title_event %></td>
-      <td><%= event.city %> ,<%= event.country %></td>
-      <td><%= event.starting_date.strftime("%d-%m-%Y")%></td>
-      <td><%= event.creator.email %></td>
-      <td><%= event.attendees.count %>/<%= event.number_of_places %></td>
-      <td><%= link_to "Voir l'événement", event_path(event) %></td>
-
-    </tr>
-
-<% end %>
-
-</table>
-
-<%= link_to "Créer mon événement", new_event_path %>
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <ul class="pagination">
+            <%= will_paginate @events, :container => false %>
+        </ul>
+      </div><!-- pagination end here -->
+    </div>
 
 
-  <% else %>
 
-Veuillez vous connecter pour voir la page du voyages LIEN
 
-<% end %>
+
+
+        </div>
+</section><!-- single popular destination  end-->
+
+
+
+
+
+
+

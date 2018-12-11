@@ -821,7 +821,10 @@ Tags: 	hotel, resort, tour, tourism, tourist, tours website, travel, traveler, t
 }
 /*===================================================== 06.Counter section css goes here =======================================================*/
  .count-down-bg {
-     background: transparent url("../images/bgimage/countbg.jpg") repeat scroll 0 0;
+     background: linear-gradient(
+ rgba(0, 0, 0, 0.30), 
+ rgba(0, 0, 0, 0.30)
+ ),transparent url("/assets/bgimage/peru.jpg") repeat scroll 0 0 ;
      background-repeat: no-repeat;
      background-size: cover;
      background-position: center center;
@@ -954,7 +957,7 @@ Tags: 	hotel, resort, tour, tourism, tourist, tours website, travel, traveler, t
 }
 /*===================================================== 08.Choose us strat section css goes here =======================================================*/
  .trabble-bg {
-     background: transparent url("../images/bgimage/travlec.jpg") no-repeat scroll center center/cover;
+     background: transparent url("assets/bgimage/travlec.jpg") no-repeat scroll center center/cover;
      position: relative;
 }
  .trabble-bg:before {
@@ -1238,7 +1241,7 @@ Tags: 	hotel, resort, tour, tourism, tourist, tours website, travel, traveler, t
      padding: 150px 0px;
 }
  .subscribe-area .subscribe-form .serach-form input {
-     background: #ffffff url("../images/icon/message.png") repeat scroll 0 0;
+     background: #ffffff url("/assets/icon/message.png") repeat scroll 0 0;
      border: medium none;
      border-radius: 4px;
      color: #727272;
@@ -1277,7 +1280,7 @@ Tags: 	hotel, resort, tour, tourism, tourist, tours website, travel, traveler, t
 }
 /*===================================================== 14.Footer area section css goes here =======================================================*/
  .footer-area {
-     background: #2f3133 url("../images/bgimage/footer1.jpg") no-repeat scroll 99% center/cover;
+     background: #2f3133 no-repeat scroll 99% center/cover;
      padding-bottom: 10px;
 }
  .footer-area .single-footer {
@@ -2030,7 +2033,7 @@ Tags: 	hotel, resort, tour, tourism, tourist, tours website, travel, traveler, t
 /*===================================================== 22.home version 2 discount section css goes here =======================================================*/
  .discount-bg {
      clear: both;
-     background: red url("../images/bgimage/tagmahal.jpg");
+     background: url( /assets/bgimage/bg.jpg);
      background-repeat: no-repeat;
      background-size: cover;
      background-position: center center;
@@ -2227,7 +2230,7 @@ Tags: 	hotel, resort, tour, tourism, tourist, tours website, travel, traveler, t
 }
 /*===================================================== 25.home version 2 subscribe section css goes here =======================================================*/
  .subscribe-area-2 {
-     background: transparent url("../images/bgimage/subs.jpg") repeat scroll 0 0;
+     background: transparent url("/assets/bgimage/subs.jpg") repeat scroll 0 0;
      padding: 50px 0;
      background-position: center center;
 }
@@ -4519,4 +4522,18 @@ Tags: 	hotel, resort, tour, tourism, tourist, tours website, travel, traveler, t
 }
 .related-title h2 {
     margin-left: -32px;
+}
+
+
+
+/*========= Notre CSS ================*/
+
+.profile-userpic img {
+ float: none;
+ margin: 0 auto;
+ width: 70%;
+ height: 70%;
+ -webkit-border-radius: 50% !important;
+ -moz-border-radius: 50% !important;
+ border-radius: 50% !important;
 }
