@@ -25,9 +25,8 @@
 <% if user_signed_in? %>
 
 
-<h1> Edit Profil </h1>
-
- <%= form_for Profil.new do |f| %>
+<%= link_to 'Home', root_path %>
+  <%= form_for @profil do |f| %>
   <p>
   <%= f.label :last_name %><br>
   <%= f.text_field :last_name %>
@@ -57,13 +56,14 @@
   <%= f.text_field :language2 %>
   </p>
   <p>
-  <%= f.label :language2 %><br>
-  <%= f.text_field :language2 %>
+  <%= f.label :language3 %><br>
+  <%= f.text_field :language3 %>
   </p>
   <p>
-  <%= f.submit "Update Profil" %>
+  <%= f.submit "update" %>
   </p>
   <% end %>
+
 
   <% else %>
 
