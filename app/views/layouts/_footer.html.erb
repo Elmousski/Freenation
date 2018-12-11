@@ -62,34 +62,7 @@
 			</div><!-- footer destination -->
 
 
-			<div class="col-md-3 col-sm-6 f-phone-responsive">
-				<div class="single-footer">
-					<div class="footer-title">
-						<h3>Quick Contact</h3>
-					</div>
-					<div class="footer-contact-form">
-			<!--  <%= form_for @contact, url: home_index_path, remote: true do |f| %> -->
-					<ul class="footer-form-element">
-						<li>
-							<%= f.text_field  :name, required: true, class: "footer-form-element",
-														placeholder: "Name" %></br>
-						</li>
-						<li>
-						 <%= f.text_field :email, required: true, class: "footer-form-element",
-														placeholder: "Email" %></br>
-						</li>
-						<li>
-						<%= f.text_area :message, rows: 8, cols: 40, required: true, class: "message",
-														placeholder: "Send a message to Alex."%></br>
-						</li>
-						<div class= "hidden">
-							<%= f.label :nickname %>
-							<%= f.text_field :nickname, :hint => 'Leave this field blank!' %>
-						</div>
-						<li>
-						<button>	 <%= f.submit 'SEND', id: 'cassecouille', class: 'btn btn-primary button' %></button>
 
-						</li>
 					</ul>
 				<% end %>
 			</div>
