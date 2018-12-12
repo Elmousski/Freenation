@@ -32,66 +32,42 @@
 <% if user_signed_in? %>
 
 
-<%= form_tag (edit_event_path), multipart: true do %>
- 
-  <% if @event.errors.any? %>
-    <div id="error_explanation">
-      <h2>
-        <%= pluralize(@event.errors.count, "error") %> prohibited
-        this user from being saved:
-      </h2>
-        <% @event.errors.full_messages.each do |msg| %>
-          <p><%= msg %></p>
-        <% end %>
-    </div>
+
+  <%= form_for @event do |f| %>
+  <p>
+  <%= f.label :title_event %><br>
+  <%= f.text_field :title_event %>
+  </p>
+  <p>
+  <%= f.label :description_event %><br>
+  <%= f.text_area :description_event %>
+  </p>
+  <p>
+  <%= f.label :number_of_places %><br>
+  <%= f.number_field :number_of_places %>
+  </p>
+  <p>
+  <%= f.label :price %><br>
+  <%= f.number_field :price %>
+  </p> 
+  <p>
+  <%= f.label :starting_date %><br>
+  <%= f.date_field :starting_date %>
+  </p>
+  <p>
+  <%= f.label :ending_date %><br>
+  <%= f.date_field :ending_date %>
+  </p>
+  <p>
+  <%= f.label :picture %><br>
+  <%= f.file_field :picture %>
+  </p>
+  <p>
+  <%= f.submit "update" %>
+  </p>
+
   <% end %>
-
-  <div class="form-group">
-      <%= label_tag 'title_event', "What's the name of the event ?", class: "h4" %></br>
-      <%= text_field_tag :title_event, nil, :required => true, placeholder: "Title", autofocus: true, class: 'form-control' %>
-  </div>
-
-  <div class="form-group">    
-      <%= label_tag 'description_event', "Could you describe the event ?", class: "h4" %></br>
-      <%= text_area_tag :description_event, nil, :required => true, placeholder: "Description (300 characters min)", class: 'form-control' %>
-  </div>
-
-  <div class="form-group">
-      <%= label_tag 'address', "What is the adress of the meeting point ?", class: "h4" %></br>
-      <%= text_field_tag :address, nil, :required => true, placeholder: "Adress", class: 'form-control' %>
-  </div>
-
-  <div class="form-group">
-      <%= label_tag 'number_of_places', "How many people are attended ?", class: "h4" %></br>
-      <%= text_field_tag :number_of_places, nil, :required => true, placeholder: "Number", class: 'form-control' %>
-  </div>
-
-  <div class="form-group">
-      <%= label_tag 'price', "How much is it per person ?", class: "h4" %></br>
-      <%= text_field_tag :price, nil, :required => true, placeholder: "Price", class: 'form-control' %>
-  </div>
-
-  <div class="form-group">
-      <%= label_tag 'starting_date', "When will start the event ?", class: "h4" %></br>
-      <%= date_field_tag :starting_date, nil, :required => true %>
-  </div>
-
-  <div class="form-group">
-      <%= label_tag 'ending_date', "When will end the event ?", class: "h4" %></br>
-      <%= date_field_tag :ending_date, nil, :required => true %>
-  </div>
-
-  <div class="form-group">
-      <%= label_tag 'picture', "A picture to present the event ? (767 X 450px)", class: "h4" %></br>
-      <%= file_field_tag :picture %>
-  </div>
- </br>
-  <div class="form-group">
-      <%= submit_tag 'Create', class: "booking-confirm hvr-shutter-out-horizontal" %>
-  </div>
-
-<% end %>
-
+  
 <% else %>
 
 Login to create an event. 

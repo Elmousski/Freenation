@@ -58,13 +58,15 @@ class EventsController < ApplicationController
     end
   end
 
+  
 
+  
   private
     def set_event
       @event = Event.find(params[:id])
     end
 
     def event_params
-      params.permit(:title_event, :picture, :description_event, :ending_date, :country, :city, :number_of_places, :starting_date,:price, :creator, :address, :latitude, :longitude,)
+      params.require(:event).permit(:title_event, :picture, :description_event, :ending_date, :country, :city, :number_of_places, :starting_date,:price, :creator, :address, :latitude, :longitude,)
     end
 end

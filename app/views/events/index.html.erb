@@ -1,15 +1,15 @@
 <!-- blog breadcrumb version one strat here -->
 <section class="breadcrumb-blog-version-one">
-  <div class="single-bredcurms" style="background-image:url('/assets/bercums/Single-Package-Details.jpg');">
+  <div class="single-bredcurms" style="background-image:url('/assets/packages/bg.jpg');">
     <div class="container">
       <div class="row">
         <div class="col-sm-12">
           <div class="bredcrums-content">
             <h2>Events</h2>
             <ul>
-              <li><a href="index.html">Home</a>
+              <li><a href="/">Home</a>
               </li>
-              <li class="active">Events</li>
+              <li style="color:white;"><u>Events</u></li>
             </ul>
           </div>
         </div>
@@ -35,7 +35,7 @@
 
                                           </div>
                                           <div class="package-content">
-                                                <h3><%= event.title_event %></h3>
+                                                <h3><%= truncate(event.title_event, :length => 28) %></h3>
                                                 <p><%= event.city %>, <%= event.starting_date.strftime("%d-%m-%Y")%>, 
                                                 </p>
                                           </div>
