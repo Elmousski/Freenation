@@ -4,6 +4,25 @@
 <script src='//cdn.jsdelivr.net/gmaps4rails/2.1.2/gmaps4rails.js'> </script>
 <script src='//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore.js'> </script>
 
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+
+
 <!-- blog breadcrumb version one strat here -->
 <section class="breadcrumb-blog-version-one">
   <div class="single-bredcurms" style="background-image:url('/assets/packages/bg.jpg');">
@@ -38,23 +57,14 @@
             <h2><%= @event.title_event %></h2>
           </div>
           <ul class="package-content">
-            <li><%= @event.starting_date.strftime("%d-%m-%Y") %></li>
-            <li>
-              <span>
-                 <i class="fa fa-star"></i>
-                 <i class="fa fa-star"></i>
-                 <i class="fa fa-star"></i>
-                 <i class="fa fa-star"></i>
-                 <i class="fa fa-star"></i>
-               </span>
-            </li>
+            <li> Stating Date : <%= @event.starting_date.strftime("%d-%m-%Y") %></li>
             <li><%= @event.price %> €</li>
           </ul>
           <div class="package-features-image">
           <% if @event.picture.attached? %>
           <%= image_tag @event.picture %>
           <% else %>
-         <img src="/assets/packages/13.jpg" alt="" class="img-responsove border-raduis-3">
+         <img src="/assets/defaut.jpg" alt="" class="img-responsove border-raduis-3">
           <% end %>
           </div>
         </div><!-- tab menu strat -->
@@ -126,11 +136,20 @@
                   <div class="tour-description">
                     <h4>Participants</h4>
               <p>Don't hesitate to ask your questions in the contact area or contact <%= @event.creator.email %></p>
-          <% @event.attendees.each do |attendee| %> 
-              <p><%= attendee.email %> <%= link_to('Voir le profil du participant', user_path(attendee)) %> 
-
-          <% end %>
-
+              <table>
+                  <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Profil</th>
+                 </tr>
+                  <% @event.attendees.each do |attendee| %> 
+                 <tr>
+                    <td><%= attendee.email %></td>
+                    <td>Maria Anders</td>
+                    <td><%= link_to('Voir le profil du participant', user_path(attendee)) %> </td>
+                  </tr>
+                <% end %>
+              </table>
                   </div>
                 </div>
               </div>
@@ -178,7 +197,7 @@
         <aside>
           <div class="booking-form">
             <div class="booking-title">
-              <h2>Il reste X place</h2>
+              <h2>Il reste <%= @event.number_of_places %> places</h2>
             </div>
             <form action="#" method="post">
               <div class="form-group">
@@ -198,7 +217,7 @@
           <div class="addfor-bg">
             <div class="add-content">
               <h3>Organisator</h3>
-              <p>Prénom + Faire apparaître la photo du gars en rond</p>
+              <!--  Ajouter info profil -->
               <ul class="contact-for-add">
                 <li><img src="/assets/icon/phone.png" alt="">lien vers son profil</li>
               </ul>

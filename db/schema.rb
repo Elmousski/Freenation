@@ -97,7 +97,9 @@ ActiveRecord::Schema.define(version: 2018_12_10_155949) do
     t.string "language3"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "user"
     t.bigint "user_id"
+    t.index ["user"], name: "index_profils_on_user"
     t.index ["user_id"], name: "index_profils_on_user_id"
   end
 
