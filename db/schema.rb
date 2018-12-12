@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_12_133251) do
+ActiveRecord::Schema.define(version: 2018_12_12_154618) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -85,29 +85,6 @@ ActiveRecord::Schema.define(version: 2018_12_12_133251) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "profils", force: :cascade do |t|
-    t.string "last_name"
-    t.string "first_name"
-    t.integer "age"
-    t.string "title_job"
-    t.text "life_description"
-    t.string "city"
-    t.string "language1"
-    t.string "language2"
-    t.string "language3"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.bigint "user_id"
-    t.index ["user_id"], name: "index_profils_on_user_id"
-  end
-
-  create_table "profils_users", id: false, force: :cascade do |t|
-    t.bigint "profil_id", null: false
-    t.bigint "user_id", null: false
-    t.index ["profil_id", "user_id"], name: "index_profils_users_on_profil_id_and_user_id"
-    t.index ["user_id", "profil_id"], name: "index_profils_users_on_user_id_and_profil_id"
-  end
-
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -133,5 +110,4 @@ ActiveRecord::Schema.define(version: 2018_12_12_133251) do
   add_foreign_key "comments", "events"
   add_foreign_key "comments", "users"
   add_foreign_key "events", "users"
-  add_foreign_key "profils", "users"
 end
