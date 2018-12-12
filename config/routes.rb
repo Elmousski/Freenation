@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resources :home, only: [:index, :new, :create]
   resources :events
   get "events/subscribe/:id", to: "events#subscribe"
-
+  resources :contactadmin
   resources :profils
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

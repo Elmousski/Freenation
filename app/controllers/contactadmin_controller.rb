@@ -1,9 +1,11 @@
 class ContactadminController < ApplicationController
   skip_before_action :verify_authenticity_token
+
+
+
     def index
       @contact = Contactadmin.new(params[:contactadmin])
     end
-
     def test
     end
 
