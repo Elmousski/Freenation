@@ -17,7 +17,7 @@
               </li>
               <li><a href="/events">Events</a>
               </li>
-              <li class="active"><%= @event.title_event %>
+              <li style="color:white;"><u><%= @event.title_event %></u></li>
               </li>
             </ul>
           </div>
@@ -83,6 +83,10 @@
                   <div class="tour-description">
                     <h4>Tour Description</h4>
                     <p><%= @event.description_event %></p>
+                    <div style='width: 420px;'>
+                          <div id="map" style='width: 420px; height: 400px;'>
+                          </div>
+                          </div>
                   </div>
                 </div><!-- left-content -->
 
@@ -142,12 +146,10 @@
                   <div class="tour-description">
                     <h4>Map Tour</h4>
                     <!-- map -->
-                    <div class="mapp" id="overlay">
-                      <div style='width: 800px;'>
-                      <div id="map" style='width: 800px; height: 400px;'></div>
-                      </div>
-                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10498.641906200692!2d2.4238914832412326!3d48.864684418713324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd75aa923fdf4ed1b!2sMega+Digital!5e0!3m2!1sfr!2sfr!4v1544374441536" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-                    </div><!-- map -->
+                          <div style='width: 800px;'>
+                          <div id="map" style='width: 800px; height: 400px;'>
+                          </div>
+                          </div>
                   </div>
                 </div>
               </div>
@@ -180,16 +182,16 @@
             <div class="booking-title">
               <h2>Il reste X place</h2>
             </div>
-            <form action="#" method="post">
+            
               <div class="form-group">
-<% if @event.attendees.count <= @event.number_of_places && unless @event.attendees.include? current_user %>
-<%= link_to "JOIN THE EVENT", { :controller => "events", :action => "subscribe"}, class: "btn btn-success booking-confirm hvr-shutter-out-horizontal" %>
-<% else  @event.attendees.include? current_user %>
-<p class="text-center"> Deja inscrit ! :) </p>
-<% end %>
-<% end %>
+                <% if @event.attendees.count <= @event.number_of_places && unless @event.attendees.include? current_user %>
+                  <%= link_to "JOIN THE EVENT", { :controller => "events", :action => "subscribe"}, class: "btn btn-success booking-confirm hvr-shutter-out-horizontal" %>
+                <% else  @event.attendees.include? current_user %>
+                  <p class="text-center"> Deja inscrit ! :) </p>
+                <% end %>
+                <% end %>                
               </div>
-            </form>
+            
           </div>
         </aside><!-- adverestment start here-->
 
