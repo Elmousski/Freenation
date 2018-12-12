@@ -70,7 +70,7 @@
             <img class="counter-elements" height="35px" width="35px" src="/assets/icon/4.jpg">
             <span style="font-size: 1em; color: Snow;"><i class="fa fa-caret-down"></i></span>
                 <ul class="dropdown">
-                    <li><a href="index.html">My profile</a>
+                    <li><%= link_to "Profil", users_path %>
                     </li>
                     <li><%= link_to "Log out", destroy_user_session_path , method: :delete %>
                     </li>
@@ -91,13 +91,12 @@
       </div>
     </div>
   </div>
+
   <!-- header-bottom area end here -->
   <!-- header-bottom area end here -->
 </header>
 <!-- header area end here -->
-  <% flash.each do |message_type, message| %>
-  <div class="alert alert-<%= message_type %>"><%= message %></div>
-   <% end %>
+
     <%= yield %>
 
 
