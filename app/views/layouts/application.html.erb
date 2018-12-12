@@ -91,13 +91,12 @@
       </div>
     </div>
   </div>
+
   <!-- header-bottom area end here -->
   <!-- header-bottom area end here -->
 </header>
 <!-- header area end here -->
-  <% flash.each do |message_type, message| %>
-  <div class="alert alert-<%= message_type %>"><%= message %></div>
-   <% end %>
+
     <%= yield %>
 
 
