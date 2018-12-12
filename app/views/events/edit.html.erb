@@ -32,6 +32,7 @@
 <% if user_signed_in? %>
 
 
+
   <%= form_for @event do |f| %>
   <p>
   <%= f.label :title_event %><br>
@@ -64,6 +65,7 @@
   <p>
   <%= f.submit "update" %>
   </p>
+
   <% end %>
   
 <% else %>

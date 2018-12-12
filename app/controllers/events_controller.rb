@@ -32,6 +32,9 @@ class EventsController < ApplicationController
 
 
   def update
+    unless current_user == @event.creator
+    redirect_back fallback_location: root_path, notice: 'User is not owner'
+  end
     @event.update(event_params)
     redirect_to events_path(@event.id)
   end

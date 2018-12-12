@@ -46,6 +46,49 @@
                 <%= f.label :password_confirmation, class: "h4" %> :<br />
                 <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control" %>
               </div>
+              
+              <div class="form-group">
+                <%= f.label :"Last name", class: "h4" %> :<br />
+                <%= f.text_field :last_name, class: "form-control" %>
+              </div>
+
+             <div class="form-group">
+                <%= f.label :"First name", class: "h4" %> :<br />
+                <%= f.text_field :first_name, class: "form-control" %>
+              </div>
+
+              <div class="form-group">
+                <%= f.label :"age", class: "h4" %> :<br />
+                <%= f.text_field :age, class: "form-control" %>
+              </div>
+
+              <div class="form-group">
+                <%= f.label :"city", class: "h4" %> :<br />
+                <%= f.text_field :city, class: "form-control" %>
+              </div>
+
+               <div class="form-group">
+                <%= f.label :"Your Job", class: "h4" %> :<br />
+                <%= f.text_field :title_job, class: "form-control" %>
+              </div>
+
+              <div class="form-group">
+                <%= f.label :"language 1", class: "h4" %> :<br />
+                <%= f.text_field :language1, class: "form-control" %>
+              </div>
+
+              <div class="form-group">
+                <%= f.label :"language 2", class: "h4" %> :<br />
+                <%= f.text_field :language2, class: "form-control" %>
+              </div>
+
+             <div class="form-group">
+                <%= f.label :"language 3", class: "h4" %> :<br />
+                <%= f.text_field :language3, class: "form-control" %>
+              </div>
+
+
+
               <div class="form-group">
                 <%= f.submit "sign Up", class: "booking-confirm hvr-shutter-out-horizontal" %>
               </div>
