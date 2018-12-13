@@ -205,10 +205,10 @@ tr:nth-child(even) {
               <h3>Organised by :</h3>
               <h2 style="color: white;"><%= @event.creator.first_name %> </h2>
               <% if @event.creator.avatar.attached? %>
-            <div class="profile-userpic"><%= image_tag(@event.creator.avatar, height: '290', width: '290', alt: "avatar" ) %>
+              <div class="profile-userpic"><%= image_tag(@event.creator.avatar, height: '290', width: '290', alt: "avatar" ) %></div>
             <% else %>
-            <img class="counter-elements" height="55px" width="55px" src="/assets/icon/4.jpg">
-            <% end %></div>
+            <div><img class="counter-elements" height="55px" width="55px" src="/assets/icon/4.jpg"></div>
+            <% end %>
               <ul class="contact-for-add">
                 <li><%= link_to "Profile", user_path(@event.creator.id) %></li>
               </ul>

@@ -6,6 +6,21 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+User.create!(
+	email: "bibim.cup@hotmail.fr",
+	password: "123456",
+	password_confirmation: "123456",
+	last_name: "I",
+	first_name: "jack",
+	age: 8,
+	title_job: "dev ruby",
+	life_description: "kiffeur",
+	city: "Paris",
+	language1: "français",
+	language2: "anglais",
+	language3: "chinois",
+)
+
 Event.create!(title_event:"Création d'un réseau Corse-Afrique", #(string)
 	city:'Libreville', #(string)
 	country:'Gabon', #(string)
