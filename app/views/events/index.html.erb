@@ -17,7 +17,7 @@
     </div>
   </div>
 </section><!-- blog breadcrumb version one end here -->
- 
+
 
 <section class="blog-contents-version-one pt-100 pb-70 popular-packages">
       <div class="container">
@@ -26,7 +26,7 @@
                               <div class="col-md-4 col-sm-6">
                                     <div class="single-package">
                                           <div class="package-image">
-                                                    
+
                                                 <% if event.picture.attached? %>
                                                 <%= image_tag event.picture %>
                                                 <% else %>
@@ -36,7 +36,7 @@
                                           </div>
                                           <div class="package-content">
                                                 <h3><%= truncate(event.title_event, :length => 28) %></h3>
-                                                <p><%= event.city %>, <%= event.starting_date.strftime("%d-%m-%Y")%>, 
+                                                <p><%= event.city %>, <%= event.starting_date.strftime("%d-%m-%Y")%>,
                                                 </p>
                                           </div>
                                           <div class="package-calto-action">
@@ -66,10 +66,3 @@
 
         </div>
 </section><!-- single popular destination  end-->
-
-
-
-
-
-
-
