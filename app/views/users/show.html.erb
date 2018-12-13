@@ -29,8 +29,13 @@
 						<div class="booking-title">
 							<h2>Michel Lamiche</h2>
 						</div>
-						<div class="profile-userpic">
+					<div class="profile-userpic">
+						<% if @user.avatar.attached? %>
+                          <%= image_tag @user.avatar %>
+                        <% else %>   
                     		<img src="/assets/icon/deku.jpg" class="img-responsive" alt="">
+                        <% end %>
+					
                 		</div>
                 	</br>
                 	</br>
