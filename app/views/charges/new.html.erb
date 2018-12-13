@@ -1,14 +1,41 @@
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+<!-- blog breadcrumb version one strat here -->
+<section class="breadcrumb-blog-version-one">
+	<div class="single-bredcurms" style="background-image:url('/assets/packages/bg.jpg');">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="bredcrums-content">
+						<h2>Reservation</h2>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li class="active"><a href="contact.html">Reservation</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section><!-- blog breadcrumb version one end here -->
+
+</br>
+</br>
+</br>
+
+  <article style="margin-top:100px; padding-bottom:100px; margin-bottom:75px;">
+
 <%= form_tag charges_path do %>
-  <article>
+
     <% if flash[:error].present? %>
       <div id="error_explanation">
         <p><%= flash[:error] %></p>
       </div>
     <% end %>
     <label class="amount">
-      <span>Amount: $5.00</span>
+      <span>PRICE: 5 $</span>
     </label>
-  </article>
+
 
   <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
           data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
@@ -16,3 +43,4 @@
           data-amount="500"
           data-locale="auto"></script>
 <% end %>
+</article>

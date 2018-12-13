@@ -73,10 +73,43 @@ Tags: 	hotel, resort, tour, tourism, tourist, tours website, travel, traveler, t
  .ui-datepicker.ui-widget.ui-widget-content.ui-helper-clearfix.ui-corner-all {
      z-index: 28 !important;
 }
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+
+}
+
+#pay {
+  position: absolute;
+  left: 400px;
+  height: 300px;
+  border: 3px solid black;
+}
+
+
+#mc-embedded-subscribe {
+  background-color: orange;
+  border-radius: 5%;
+  width:120px;
+  height:30px;
+  color: white;
+  box-shadow: 1px 1px 1px 1px white;
+  border: none;
+}
+
 #cassecouille {
   background-color: transparent;
   width: 50px;
   height: 20px;
+  color: white;
+}
+#mailmoussier {
+  text-decoration: none;
+  color: white;
+}
+#contactus {
+  text-decoration: none;
   color: white;
 }
  .pt-100 {
@@ -1288,15 +1321,18 @@ Tags: 	hotel, resort, tour, tourism, tourist, tours website, travel, traveler, t
  .footer-area {
      background: #2f3133 no-repeat scroll 99% center/cover;
      padding-bottom: 10px;
+
 }
  .footer-area .single-footer {
      padding: 80px 0;
+
 }
  .footer-area .single-footer .footer-title {
      font-weight: 600;
      font-size: 20px;
      color: #ffffff;
      padding: 20px 0;
+
 }
  .footer-area .single-footer .footer-left .footer-logo p {
      color: #ffffff;
