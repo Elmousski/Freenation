@@ -74,9 +74,7 @@ tr:nth-child(even) {
             <li role="presentation" class="active"><a href="#description" aria-controls="description" role="tab" data-toggle="tab">Description</a>
             </li>
             <li role="presentation"><a href="#video" aria-controls="video" role="tab" data-toggle="tab">Participants</a>
-            </li>
-            <li role="presentation"><a href="#map" aria-controls="map" role="tab" data-toggle="tab">Tour Map</a>
-            </li>
+           
             <li role="presentation"><a href="#reviews" aria-controls="reviews" role="tab" data-toggle="tab">Comments</a>
             </li>
           </ul>
@@ -159,20 +157,6 @@ tr:nth-child(even) {
               </div>
             </div><!-- video tab content end -->
 
-            <div role="tabpanel" class="tab-pane fade" id="map">
-              <div class="row">
-                <div class="col-md-11 col-sm-11">
-                  <div class="tour-description">
-                    <h4>Map Tour</h4>
-                    <!-- map -->
-                          <div style='width: 800px;'>
-                          <div id="map" style='width: 800px; height: 400px;'>
-                          </div>
-                          </div>
-                  </div>
-                </div>
-              </div>
-            </div>
 
             <!-- video tab content start -->
             <div role="tabpanel" class="tab-pane fade" id="reviews">
@@ -219,7 +203,7 @@ tr:nth-child(even) {
           <div class="addfor-bg">
             <div class="add-content">
               <h3>Organisator</h3>
-              <!--  Ajouter info profil -->
+              <h2> <%= @event.creator %> </h2>
               <ul class="contact-for-add">
                 <li><img src="/assets/icon/phone.png" alt="">lien vers son profil</li>
               </ul>

@@ -71,8 +71,10 @@
             <span style="font-size: 1em; color: Snow;"><i class="fa fa-caret-down"></i></span>
                 <ul class="dropdown">
 
-                    <li><%= link_to "Profil", users_path %>
+                    <li><%= link_to "Profil", user_path(current_user.id) %>
 
+                    </li>
+                    <li><%= link_to "Edit Profil", edit_user_registration_path %>
                     </li>
                     <li><%= link_to "Log out", destroy_user_session_path , method: :delete %>
                     </li>

@@ -6,7 +6,7 @@ class User < ApplicationRecord
       has_many :languages
       has_many :events
       has_many :follows
-      has_many :comments
+      has_many :comments, dependent: :destroy
       has_one :profil
 
 end

@@ -35,28 +35,28 @@
 
   <%= form_for @event do |f| %>
   <p>
-  <%= f.label :title_event %><br>
-  <%= f.text_field :title_event %>
+  <%= f.label :title_event, class: "h4" %><br>
+  <%= f.text_field :title_event, class: "form-control" %>
   </p>
   <p>
-  <%= f.label :description_event %><br>
-  <%= f.text_area :description_event %>
+  <%= f.label :description_event, class: "h4" %><br>
+  <%= f.text_area :description_event, class: "form-control" %>
   </p>
   <p>
-  <%= f.label :number_of_places %><br>
-  <%= f.number_field :number_of_places %>
+  <%= f.label :number_of_places, class: "h4" %><br>
+  <%= f.number_field :number_of_places, class: "form-control" %>
   </p>
   <p>
-  <%= f.label :price %><br>
-  <%= f.number_field :price %>
+  <%= f.label :price, class: "h4" %><br>
+  <%= f.number_field :price, class: "form-control" %>
   </p> 
   <p>
-  <%= f.label :starting_date %><br>
-  <%= f.date_field :starting_date %>
+  <%= f.label :starting_date, class: "h4" %><br>
+  <%= f.date_field :starting_date, class: "form-control" %>
   </p>
   <p>
-  <%= f.label :ending_date %><br>
-  <%= f.date_field :ending_date %>
+  <%= f.label :ending_date, class: "h4" %><br>
+  <%= f.date_field :ending_date, class: "form-control" %>
   </p>
   <p>
   <%= f.label :picture %><br>
