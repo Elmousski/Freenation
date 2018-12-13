@@ -1,0 +1,83 @@
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+<!-- blog breadcrumb version one strat here -->
+<section class="breadcrumb-blog-version-one">
+	<div class="single-bredcurms" style="background-image:url('/assets/bercums/Single-Package-Details.jpg');">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="bredcrums-content">
+						<h2>Contact</h2>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li class="active"><a href="contact.html">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section><!-- blog breadcrumb version one end here -->
+
+<!-- google map end  -->
+<section class="section-paddings">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-sm-6 col-xs-12">
+				<div class="contact-title">
+					<h2>Our Office</h2>
+				</div>
+				<div class="address">
+					<p>
+						<strong>Address</strong>
+						<br> Rue de Rome <br /> Batiment C, 4ème étage <br /> 75017 Paris, France
+					</p>
+					<p>
+						<strong>Website</strong>
+						<br> Freenation.herokuapp.com
+					</p>
+					<p>
+						<strong>Email</strong>
+						<br> a.moussier@hotmail.fr
+					</p>
+				</div>
+			</div>
+			<div class="col-md-6 col-sm-6 col-xs-12">
+				<div class="contact-title">
+					<h2>Contact</h2>
+				</div>
+				<%= form_for @contact, url: contactadmin_index_path, remote: true do |f| %>
+				<div class="contact-form">
+					<div id="contact">
+						<div id="message"></div>
+						<!-- Contact Form -->
+						<form class="form" method="post" action="contact.php" name="contactform" id="contactform">
+
+							<div class="form-group">
+                <%= f.text_field  :name, required: true, id:"name",
+                               placeholder: "Name" %></br>
+							</div>
+							<div class="form-group">
+                <%= f.text_field :email, required: true, id:"email",
+                                placeholder: "Email" %></br>
+
+							</div>
+							<div class="form-group">
+                <%= f.text_area :message, rows: 8, cols: 40, required: true, id:"subject", class: "message",
+                                  placeholder: "Send a message to Alex."%></br>
+
+							</div>
+
+							<div class="form-group">
+                  <%= f.submit 'SEND', class: 'button primary button' %>
+							</div>
+
+						</form><!--/ End Contact Form -->
+						<% end %>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
