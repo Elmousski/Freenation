@@ -73,6 +73,22 @@ Tags: 	hotel, resort, tour, tourism, tourist, tours website, travel, traveler, t
  .ui-datepicker.ui-widget.ui-widget-content.ui-helper-clearfix.ui-corner-all {
      z-index: 28 !important;
 }
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+#mc-embedded-subscribe {
+  background-color: orange;
+  border-radius: 5%;
+  width:120px;
+  height:30px;
+  color: white;
+  box-shadow: 1px 1px 1px 1px white;
+  border: none;
+}
+
 #cassecouille {
   background-color: transparent;
   width: 50px;
