@@ -47,6 +47,17 @@ ActiveRecord::Schema.define(version: 2018_12_12_154618) do
     t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
+  create_table "contactadmins", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "controllers", force: :cascade do |t|
+    t.string "contactadmin"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "events", force: :cascade do |t|
     t.string "title_event"
     t.string "city"

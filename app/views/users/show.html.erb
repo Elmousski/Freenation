@@ -1,6 +1,6 @@
 <!-- blog breadcrumb version one strat here -->
 <section class="breadcrumb-blog-version-one">
-	<div class="single-bredcurms" style="background-image:url('/assets/bercums/Single-Package-Details.jpg');">
+	<div class="single-bredcurms" style="background-image:url('/assets/packages/bg.jpg');">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12">
@@ -9,7 +9,7 @@
 						<ul>
 							<li><a href="/">Home</a>
 							</li>
-							<li class="active">Profile
+							<li style="color:white;"><u>Profile</u>
 							</li>
 						</ul>
 					</div>
@@ -29,8 +29,13 @@
 						<div class="booking-title">
 							<h3> <i class="fas fa-user-alt"></i> <%= @user.last_name %> <%= @user.first_name %></h3>
 						</div>
-						<div class="profile-userpic">
+					<div class="profile-userpic">
+						<% if @user.avatar.attached? %>
+                          <%= image_tag @user.avatar %>
+                        <% else %>   
                     		<img src="/assets/icon/deku.jpg" class="img-responsive" alt="">
+                        <% end %>
+					
                 		</div>
                 	</br>
                 	</br> 

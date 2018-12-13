@@ -202,10 +202,15 @@ tr:nth-child(even) {
         <div class="adding-form">
           <div class="addfor-bg">
             <div class="add-content">
-              <h3>Organisator</h3>
-              <h2> <%= @event.creator %> </h2>
+              <h3>Organised by :</h3>
+              <h2 style="color: white;"><%= @event.creator.first_name %> </h2>
+              <% if @event.creator.avatar.attached? %>
+            <div class="profile-userpic"><%= image_tag(@event.creator.avatar, height: '290', width: '290', alt: "avatar" ) %>
+            <% else %>
+            <img class="counter-elements" height="55px" width="55px" src="/assets/icon/4.jpg">
+            <% end %></div>
               <ul class="contact-for-add">
-                <li><img src="/assets/icon/phone.png" alt="">lien vers son profil</li>
+                <li><%= link_to "Profile", user_path(@event.creator.id) %></li>
               </ul>
             </div>
           </div>

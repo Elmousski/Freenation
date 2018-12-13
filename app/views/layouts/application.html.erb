@@ -65,14 +65,19 @@
             <ul class="main-menu text-right">          
             <% if user_signed_in? %>
             <li><%= link_to "Events", events_path %>
-            </li>
+                <ul class="dropdown">
+                    <li><%= link_to "Create event", new_event_path %>
+                    </li>
+                </ul>
             <li>
+            <% if current_user.avatar.attached? %>
+            <%= image_tag(current_user.avatar, height: '50', width: '50', alt: "avatar")%>
+            <% else %>
             <img class="counter-elements" height="35px" width="35px" src="/assets/icon/4.jpg">
+            <% end %>
             <span style="font-size: 1em; color: Snow;"><i class="fa fa-caret-down"></i></span>
                 <ul class="dropdown">
-
                     <li><%= link_to "Profil", user_path(current_user.id) %>
-
                     </li>
                     <li><%= link_to "Edit Profil", edit_user_registration_path %>
                     </li>

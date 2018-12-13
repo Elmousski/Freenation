@@ -103,6 +103,10 @@
      <%= f.text_field :language3, autocomplete: "language3", class: "form-control" %>
   </div><br>
 
+   <div class="field">
+     <%= f.label :"Your avatar"%> :<br />
+     <%= f.file_field :avatar, autocomplete: "avatar" %>
+  </div>
 
   <div class="field">
     <%= f.label :current_password, class: "h4" %> <i>(we need your current password to confirm your changes)</i><br />
