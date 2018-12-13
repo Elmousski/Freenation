@@ -58,6 +58,11 @@ tr:nth-child(even) {
           </div>
           <ul class="package-content">
             <li> Stating Date : <%= @event.starting_date.strftime("%d-%m-%Y") %></li>
+            
+                  <% if @event.user_id == current_user.id %>
+                  <li><%= link_to "Edit", edit_event_path %></li>
+                  <% end %>
+            
             <li><%= @event.price %> €</li>
           </ul>
           <div class="package-features-image">
@@ -218,11 +223,9 @@ tr:nth-child(even) {
         <div class="adding-form">
           <div class="addfor-bg">
             <div class="add-content">
-              <h3>Organisator</h3>
+              <h3>Organised by</h3>
+              <span style="color: white;"><%= @event.creator.first_name %></span> <%= link_to "Profile creator", user_path(@event.creator.id) %>
               <!--  Ajouter info profil -->
-              <ul class="contact-for-add">
-                <li><img src="/assets/icon/phone.png" alt="">lien vers son profil</li>
-              </ul>
             </div>
           </div>
         </div><!-- adverestment start here-->
