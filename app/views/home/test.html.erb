@@ -1,3 +1,14 @@
+
+<% if current_user.avatar.attached? %>
+            <%= image_tag(current_user.avatar, height: '50', width: '50', alt: "avatar", class: "profile-userpic") %>
+              <% else %>   
+             <img class="counter-elements" height="35px" width="35px" src="/assets/icon/4.jpg">
+             <% end %>
+
+
+                           <img src="/assets/icon/deku.jpg" class="profile-userpic" alt="">
+                  
+
 <!-- blog breadcrumb version one strat here -->
 <section class="breadcrumb-blog-version-one">
 	<div class="single-bredcurms" style="background-image:url('/assets/bercums/Single-Package-Details.jpg');">
