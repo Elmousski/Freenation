@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
       has_many :languages
       has_many :events
-      has_many :comments
-	  has_one_attached :avatar
+      has_many :comments, dependent: :destroy
+      has_one_attached :avatar
+
 end

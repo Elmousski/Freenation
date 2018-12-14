@@ -1,24 +1,44 @@
-# README
+# Projet Final : FreeNation 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Team Alexandre, Joel, Jonathan, Matthieu et Emilie
 
-Things you may want to cover:
+## Bienvenue !
 
-* Ruby version
+Après 2 mois et demi de formation au code informatique, nous vous presentons notre projet final. FreeNation ! Il sagit d'une plateforme pour mettre en relation des freelances à travers des excursions aux quatres coins du monde. Le principe est simple, vous vous inscrivez pour accéder aux evènements proposés par d'autres freelances et vous pouvez proposer vos évènements. Ainsi, vous pourrez partir quelques semaines dans un endroit de rêve avec d'autres digital nomads et ainsi concillier travail et découverte du pays, plutôt cool non ? 
 
-* System dependencies
+## Pré-requis et installation :
 
-* Configuration
+1 - Voici le lien en production de l'application :
+```
+  > https://freenation.herokuapp.com/
+```
 
-* Database creation
+2 - Pour le faire fonctionner sur ta machine, voici la marche à suivre :
 
-* Database initialization
+  2.1 - Cloner le repository :
+```
+  $ git clone https://github.com/joelthp/Freenation
+```
 
-* How to run the test suite
+  2.2 - Effectuer l'initialisation de l'application :
+```
+  $ bundle install
 
-* Services (job queues, cache servers, search engines, etc.)
+  $ rails db:create && rails db:migrate && rails db:seed
+```
 
-* Deployment instructions
 
-* ...
+  2.3 - Lancer le fonctionnement en local :
+  ```
+  $ rails server
+  
+```
+Puis dans ton navigateur va à l'adresse :
+```
+@ http://localhost:3000/
+
+```
+
+
+
+

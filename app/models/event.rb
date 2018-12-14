@@ -4,4 +4,5 @@ class Event < ApplicationRecord
   geocoded_by :address
   after_validation :geocode
   has_one_attached :picture
+  has_many :comments, dependent: :destroy
 end

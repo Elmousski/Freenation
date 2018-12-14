@@ -1,20 +1,52 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<div id="preloader">
+    <div id="status">&nbsp;</div>
+</div>
+<!-- blog breadcrumb version one strat here -->
+<section class="breadcrumb-blog-version-one">
+  <div class="single-bredcurms" style="background-image:url('/assets/packages/bg.jpg');">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="bredcrums-content">
+            <h2>Edit your Profil</h2>
+            <ul>
+              <li><a href="/">Home</a>
+              </li>
+              <li style="color:white;"><u>Edit profil</u></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section><!-- blog breadcrumb version one end here -->
+
+<!-- realted tour start here -->
+<section class="section-paddings single-package-area">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+          <div class="single-package-title">
+            <aside>
+  <div class="booking-form">
+        
+
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
 
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.label :email, class: "h4"%> :<br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
   </div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-  <% end %>
+  <% end %> <br>
 
   <div class="field">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
+    <%= f.label :password, class: "h4" %> <i>(leave blank if you don't want to change it)</i> :<br />
+    <%= f.password_field :password, autocomplete: "new-password", class: "form-control" %>
     <% if @minimum_password_length %>
       <br />
       <em><%= @minimum_password_length %> characters minimum</em>
@@ -22,49 +54,54 @@
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
+    <%= f.label :password_confirmation, class: "h4" %> :<br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control" %>
+  </div><br>
 
   <div class="field">
-    <%= f.label :"Last name" %><br />
-    <%= f.text_field :last_name, autofocus: true, autocomplete: "last_name" %>
-  </div>
+    <%= f.label :"Last name", class: "h4" %> :<br />
+    <%= f.text_field :last_name, autofocus: true, autocomplete: "last_name", class: "form-control" %>
+  </div><br>
 
   <div class="field">
-     <%= f.label :"First name"%> :<br />
-     <%= f.text_field :first_name, autocomplete: "first_name" %>
+     <%= f.label :"First name", class: "h4"%> :<br />
+     <%= f.text_field :first_name, autocomplete: "first_name", class: "form-control" %>
+  </div><br>
+
+  <div class="form-group">
+     <%= f.label :"age", class: "h4"%> :<br />
+     <%= f.text_field :age, autocomplete: "age", class: "form-control" %>
   </div>
 
-  <div class="field">
-     <%= f.label :"age"%> :<br />
-     <%= f.text_field :age, autocomplete: "age" %>
+   <div class="form-group">
+     <%= f.label :"city", class: "h4"%> :<br />
+     <%= f.text_field :city, autocomplete: "city", class: "form-control" %>
+  </div>
+
+    <div class="form-group">
+     <%= f.label :"Your job", class: "h4"%> :<br />
+     <%= f.text_field :title_job, autocomplete: "title_job", class: "form-control" %>
   </div>
 
    <div class="field">
-     <%= f.label :"city"%> :<br />
-     <%= f.text_field :city, autocomplete: "city" %>
-  </div>
-
-    <div class="field">
-     <%= f.label :"Your job"%> :<br />
-     <%= f.text_field :title_job, autocomplete: "title_job" %>
-  </div>
+     <%= f.label :"life description", class: "h4"%> :<br />
+     <%= f.text_area :life_description, autocomplete: "life_description", class: "form-control" %>
+  </div><br>
 
   <div class="field">
-     <%= f.label :"language 1"%> :<br />
-     <%= f.text_field :language1, autocomplete: "language1" %>
-  </div>
+     <%= f.label :"language 1", class: "h4"%> :<br />
+     <%= f.text_field :language1, autocomplete: "language1", class: "form-control" %>
+  </div><br>
 
     <div class="field">
-     <%= f.label :"language 2"%> :<br />
-     <%= f.text_field :language2, autocomplete: "language2" %>
-  </div>
+     <%= f.label :"language 2", class: "h4"%> :<br />
+     <%= f.text_field :language2, autocomplete: "language2", class: "form-control" %>
+  </div><br>
 
    <div class="field">
-     <%= f.label :"language 3"%> :<br />
-     <%= f.text_field :language3, autocomplete: "language3" %>
-  </div>
+     <%= f.label :"language 3", class: "h4"%> :<br />
+     <%= f.text_field :language3, autocomplete: "language3", class: "form-control" %>
+  </div><br>
 
    <div class="field">
      <%= f.label :"Your avatar"%> :<br />
@@ -72,17 +109,28 @@
   </div>
 
   <div class="field">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "current-password" %>
-  </div>
+    <%= f.label :current_password, class: "h4" %> <i>(we need your current password to confirm your changes)</i><br />
+    <%= f.password_field :current_password, autocomplete: "current-password", class: "form-control" %>
+  </div> <br>
 
-  <div class="actions">
-    <%= f.submit "Update" %>
+  <div class="form-group">
+    <%= f.submit "Update", class: "booking-confirm hvr-shutter-out-horizontal" %>
   </div>
 <% end %>
 
 <h3>Cancel my account</h3>
 
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+  <div class="form-group">
+<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete , class: "booking-confirm hvr-shutter-out-horizontal"%></p>
+ </div>
+
+ 
+            </div>
+          </aside>
+        </div>
+      </div><!-- booking form end here -->
+    </div>
+  </div>
+</section>
 
 <%= link_to "Back", :back %>

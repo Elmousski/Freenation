@@ -1,15 +1,15 @@
 <!-- blog breadcrumb version one strat here -->
 <section class="breadcrumb-blog-version-one">
-	<div class="single-bredcurms" style="background-image:url('/assets/bercums/Single-Package-Details.jpg');">
+	<div class="single-bredcurms" style="background-image:url('/assets/packages/bg.jpg');">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12">
 					<div class="bredcrums-content">
 						<h2>Profile</h2>
 						<ul>
-							<li><a href="index.html">Home</a>
+							<li><a href="/">Home</a>
 							</li>
-							<li class="active">Profile
+							<li style="color:white;"><u>Profile</u>
 							</li>
 						</ul>
 					</div>
@@ -27,39 +27,36 @@
 				<aside>
 					<div class="booking-form">
 						<div class="booking-title">
-							<h2>Michel Lamiche</h2>
+							<h3> <i class="fas fa-user-alt"></i> <%= @user.last_name %> <%= @user.first_name %></h3>
 						</div>
 					<div class="profile-userpic">
 						<% if @user.avatar.attached? %>
                           <%= image_tag @user.avatar %>
                         <% else %>   
-                    		<img src="/assets/icon/deku.jpg" class="img-responsive" alt="">
+                    		<img src="/assets/packages/avatar.jpg" class="img-responsive" alt="">
                         <% end %>
 					
                 		</div>
                 	</br>
-                	</br>
+                	</br> 
 						<div class="form-group">
-							<h4>Lieu : Paris</h4>
+							<h4><i class="fas fa-birthday-cake"></i> Age : <%= @user.age %> ans</h4>
 						</div>
 						<div class="form-group">
-							<h4>Lieu : Paris</h4>
+							<h4><i class="fas fa-city"></i> City : <%= @user.city %></h4>
 						</div>
 						<div class="form-group">
-							<h4>Lieu : Paris</h4>
+							<h4><i class="fas fa-briefcase"> </i> Title Job : <%= @user.title_job %></h4>
 						</div>	
 						<div class="form-group">
-							<h4>Lieu : Paris</h4>
+							<h4><i class="fas fa-language"> </i> Language 1 : <%= @user.language1 %></h4>
 						</div>	
 						<div class="form-group">
-							<h4>Lieu : Paris</h4>
+							<h4><i class="fas fa-language"> </i> Language 2 : <%= @user.language2 %></h4>
 						</div>	
 						<div class="form-group">
-							<h4>Lieu : Paris</h4>
+							<h4><i class="fas fa-language"> </i> Language 3 : <%= @user.language3 %></h4>
 						</div>	
-						<div class="form-group">
-							<h4>Lieu : Paris</h4>
-						</div>		
 					</div>
 				</aside><!-- adverestment start here-->		
 			</div>
@@ -71,7 +68,7 @@
 							<h3>About me</h3>
 						</div>
 						<div class="booking-title">
-							<p style="text-align: justify;">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
+							<p style="text-align: justify;"><%= @user.life_description %></p>
 						</div>
 					</div>
 				</aside><!-- adverestment start here-->
@@ -80,18 +77,10 @@
 							<div class="discount-bg discount-content text-center">
 								<h2>Create your events</h2>
 								<div class="discount-btn">
-									<a href="#" class="travel-primary-btn hvr-fade">Create</a>
+									<a href="/events/new" class="travel-primary-btn hvr-fade">Create</a>
 								</div>
 						</div>
-					
-			</br>
-				<aside>
-					<div class="booking-form">
-						<div class="booking-title">
-							<h2>Book This Tour</h2>
-						</div>
-					</div>
-				</aside><!-- adverestment start here-->	
+				
 
 				
 			</div><!-- booking form end here -->

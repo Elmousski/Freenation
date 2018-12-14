@@ -6,9 +6,5 @@ class RemoveAllindex < ActiveRecord::Migration[5.2]
 
     remove_column :events, :user, :string
 
-    remove_column :follows, :user, :string
-    remove_column :follows, :event, :string
-
-
   end
 end
