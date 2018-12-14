@@ -57,14 +57,19 @@ tr:nth-child(even) {
             <h2><%= @event.title_event %></h2>
           </div>
           <ul class="package-content">
-            <li> Stating Date : <%= @event.starting_date.strftime("%d-%m-%Y") %></li>
+            <li> Stating Date : <%= @event.starting_date.strftime("%d-%m-%Y") %></li> 
+
             <li><%= @event.price %> €</li>
+             <% if current_user.id == @event.creator.id %>
+          <%= link_to('Edit', edit_event_path ) %>
+            <% else %>
+            <% end %>
           </ul>
           <div class="package-features-image">
           <% if @event.picture.attached? %>
           <%= image_tag @event.picture %>
           <% else %>
-         <img src="/assets/defaut.jpg" alt="" class="img-responsove border-raduis-3">
+         <img src="/assets/packages/peru.jpg" alt="" class="img-responsove border-raduis-3">
           <% end %>
           </div>
         </div><!-- tab menu strat -->
@@ -106,7 +111,6 @@ tr:nth-child(even) {
                       <div class="row">
                         <div class="col-md-6 col-sm-6">
                           <div class="info-list">
-                            <p><span><i class="fa fa-map-marker"></i></span> Location</p>
                             <p><span><i class="far fa-clock"></i></span> Duration</p>
                             <p><span><i class="fa fa-users"></i></span> Max People</p>
                             <p><span><i class="fa fa-plane"></i></span> Landing</p>
@@ -117,7 +121,7 @@ tr:nth-child(even) {
                         <div class="col-md-5 col-sm-5">
                           <div class="info-details">
                             <p><%= @event.country %></p>
-                            <p>ToDo</p>
+                            <p>21 days</p>
                             <p><%= @event.number_of_places%></p>
                             <p><%= @event.city %></p>
                             <p><%= @event.starting_date%></p>
@@ -203,11 +207,11 @@ tr:nth-child(even) {
           <div class="addfor-bg">
             <div class="add-content">
               <h3>Organised by :</h3>
-              <h2 style="color: white;"><%= @event.creator.first_name %> </h2>
+              <h2 style="color: white;"><%= @event.creator.last_name %> </h2>
               <% if @event.creator.avatar.attached? %>
               <div class="profile-userpic"><%= image_tag(@event.creator.avatar, height: '290', width: '290', alt: "avatar" ) %></div>
             <% else %>
-            <div><img class="counter-elements" height="55px" width="55px" src="/assets/icon/4.jpg"></div>
+            <div><img class="counter-elements" height="290x" width="290px" src="/assets/packages/avatar.jpg"></div>
             <% end %>
               <ul class="contact-for-add">
                 <li><%= link_to "Profile", user_path(@event.creator.id) %></li>
