@@ -189,14 +189,17 @@ tr:nth-child(even) {
             <div class="booking-title">
               <h2>Il reste <%= @event.number_of_places %> places</h2>
             </div>
-            
               <div class="form-group">
+                 <% if user_signed_in? %>
                 <% if @event.attendees.count <= @event.number_of_places && unless @event.attendees.include? current_user %>
                   <%= link_to "JOIN THE EVENT", { :controller => "events", :action => "subscribe"}, class: "btn btn-success booking-confirm hvr-shutter-out-horizontal" %>
                 <% else  @event.attendees.include? current_user %>
                   <p class="text-center"> Deja inscrit ! :) </p>
                 <% end %>
-                <% end %>                
+                <% end %>
+                <% else %>
+               <p class="text-center"> Connectez-vous pour participer</p>
+                <% end %>
               </div>
             
           </div>
