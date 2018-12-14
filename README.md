@@ -4,7 +4,7 @@
 
 ## Bienvenue !
 
-Après 2 mois et demi de formation à The Hacking Project voici enfin l'heure de vous presentez notre projet final. FreeNation, qu'est ce que c'est ? Il sagit d'une plateforme pour mettre en relation des freelances à travers des excursions dans les quatres coins du monde. Le principe est simple, tu t'inscris sur le site et la, tu as accès aux evènements proposés par des freelances. Si tu es intéressé et disponible, tu pourras alors t'inscrire pour partir quelques semaines dans un endroits de rêve avec d'autres personnes et concillier travail et découverte du pays, plutôt cool non ? 
+Après 2 mois et demi de formation au code informatique, nous vous presentons notre projet final. FreeNation ! Il sagit d'une plateforme pour mettre en relation des freelances à travers des excursions aux quatres coins du monde. Le principe est simple, vous vous inscrivez pour accéder aux evènements proposés par d'autres freelances et vous pouvez proposer vos évènements. Ainsi, vous pourrez partir quelques semaines dans un endroit de rêve avec d'autres digital nomads et ainsi concillier travail et découverte du pays, plutôt cool non ? 
 
 ## Pré-requis et installation :
 
@@ -39,11 +39,6 @@ Puis dans ton navigateur va à l'adresse :
 
 ```
 
-# Le back :
-
-
-
-# Le front : 
 
 
 
