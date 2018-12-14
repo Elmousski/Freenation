@@ -60,7 +60,7 @@ tr:nth-child(even) {
             <li> Stating Date : <%= @event.starting_date.strftime("%d-%m-%Y") %></li> 
 
             <li><%= @event.price %> €</li>
-             <% if current_user.id == @event.creator.id %>
+             <% if current_user == @event.creator %>
           <%= link_to('Edit', edit_event_path ) %>
             <% else %>
             <% end %>
