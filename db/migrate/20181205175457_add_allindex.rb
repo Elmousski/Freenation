@@ -4,9 +4,5 @@ class AddAllindex < ActiveRecord::Migration[5.2]
 	add_reference :comments, :event, foreign_key: true
 
 	add_reference :events, :user, foreign_key: true
-
-	add_reference :follows, :user, foreign_key: true
-	add_reference :follows, :event, foreign_key: true
-
   end
 end
