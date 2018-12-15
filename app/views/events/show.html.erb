@@ -67,7 +67,7 @@ tr:nth-child(even) {
           </ul>
           <div class="package-features-image">
           <% if @event.picture.attached? %>
-          <%= image_tag @event.picture %>
+          <%= image_tag(@event.picture, height: '500', width: '700', alt: "avatar" ) %>
           <% else %>
          <img src="/assets/packages/peru.jpg" alt="" class="img-responsove border-raduis-3">
           <% end %>

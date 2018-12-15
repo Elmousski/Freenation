@@ -65,9 +65,10 @@
   <p>
   <%= f.submit "update" %>
   </p>
-
+  <p>
+  <%= link_to 'Destroy', @event,  method: :delete, data: { confirm: 'Are you sure?' } %>  
   <% end %>
-  
+  </p>
 <% else %>
 
 Login to create an event. 
