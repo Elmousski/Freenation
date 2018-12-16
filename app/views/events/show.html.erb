@@ -151,7 +151,7 @@ tr:nth-child(even) {
                   <% @event.attendees.each do |attendee| %> 
                  <tr>
                     <td><%= attendee.email %></td>
-                    <td>Maria Anders</td>
+                    <td><%= attendee.first_name %></td>
                     <td><%= link_to('Voir le profil du participant', user_path(attendee)) %> </td>
                   </tr>
                 <% end %>

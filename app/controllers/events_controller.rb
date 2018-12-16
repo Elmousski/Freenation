@@ -41,7 +41,7 @@ class EventsController < ApplicationController
 
   def destroy
     @event.destroy
-    redirect_to event_path
+    redirect_to root_path, notice: "Your event has been deleted"
   end
 
 
@@ -67,6 +67,6 @@ class EventsController < ApplicationController
     end
 
     def event_params
-      params.require(:event).permit(:title_event, :picture, :description_event, :ending_date, :country, :city, :number_of_places, :starting_date, :price, :creator, :address, :latitude, :longitude)
+      params.permit(:title_event, :picture, :description_event, :ending_date, :country, :city, :number_of_places, :starting_date, :price, :creator, :address, :latitude, :longitude)
     end
 end
