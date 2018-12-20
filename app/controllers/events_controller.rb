@@ -24,6 +24,12 @@ class EventsController < ApplicationController
     if @event.save
   	  @event.attendees << current_user
       flash[:success] = "Votre événement a bien été créé !"    
+
+      AdminValidationEventMailer.contact(current_user.email, @event.title_event, @event.city, @event.country, @event.meeting_point, @event.ending_date, @event.number_of_places, @event.price, @event.starting_date, @event.starting_time).deliver_now
+
+      AdminValidationEventMailer.contact_admin("a.moussier@hotmail.fr", current_user.email, @event.title_event, @event.city, @event.country, @event.meeting_point, @event.ending_date, @event.number_of_places, @event.price, @event.starting_date, @event.starting_time, @event.description_event).deliver_now
+
+
   		redirect_to @event
   	else render 'new'
   	end
